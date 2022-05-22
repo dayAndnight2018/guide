@@ -234,7 +234,7 @@ let books = [
 			},
 			{
 				num: 19,
-				img: 'img/3.19.png',
+				img: 'img/default.png',
 				src: 'http://www.banshujiang.cn/',
 				alt: '搬书匠'			
 			},
