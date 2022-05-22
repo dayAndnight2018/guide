@@ -104,15 +104,11 @@ html{
     padding: 10px;
     background: var(--basic-fg-color);
 
-	/*display: flex;
-	flex-direction: row;
-	justify-content: flex-start;
-	align-items: flex-start;
-	flex-wrap: wrap;*/
 	display: grid;
 	grid-template-columns: repeat(auto-fill,  30%);
+	grid-template-rows: repeat(auto-fill, 80px);
 	column-gap: 2%;
-	grid-row-gap: 10px;
+	grid-row-gap: 20px;
 	justify-content: center;
 
 	overflow-y: scroll;
