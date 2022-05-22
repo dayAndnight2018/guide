@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <meta charset="utf-8" name="viewport" 
+            content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+        <link rel="stylesheet" href="css/fontIcon.css" />
+        <link rel="stylesheet" href="css/fontAwsome.css" />
+        <link rel="stylesheet" href="css/bulma.css" />
+        <link rel="stylesheet" href="css/main.css" />
+        <script src="js/vue.js"></script>
+        <script src="js/vueResource.js"></script>
+        <script src="js/jquery.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/data.js"></script>
+        <!-- 标题 -->
+        <title>Guide</title>
+    </head>
+
+    <body>
+        <div id="app" class="centerParent fullWidth fullHeight">
+            <main class="centerParent fullWidth fullHeight centerContent">
+                <h1 class="title is-1" :style="foreColor" >Guide</h1>
+                
+                <div>
+                    <input id="searchBox" class="input is-large" > </input>
+                    <button id="confirmButton" class="button is-large">Search</button>
+                </div>
+
+                <div class="addressList">
+                    <ul class="guideTab">
+                        <li v-for="ele in guideTabListData" class="guideTabItem" v-on:click="tabSelected(ele)" :data-num="ele.num">
+                            <a>
+                                <span>{{ele.title}}</span>
+                            </a>
+                        </li>
+                    </ul>
+
+                    <div class="guideDetailList">
+                        <div class="guideDetail" v-for="ele in currentGroupData" 
+                    v-show="currentGroup != null" :id="ele.alt">
+                            <img class="guideDetailImg" :src="ele.img">
+                            <div class="guideDetailContent">
+                                <h3 class="guideDetailAlt">{{ele.alt}}</h3>
+                                <a class="guideDetailLink" :href="ele.src">{{ele.src}}</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+
+        <script type="text/javascript">
+            // 初始化背景色
+            setRgbColor();
+
+            var vue = new Vue({
+                el:"#app",
+                data:{
+                    foreColor: {
+                        color: document.body.style.color
+                    },
+                    guideTabListData: guideTabListData,
+                    guideTabGroupListData: guideTabGroupListData,
+                    currentGroup: null,
+                    currentGroupData: new Array
+                },
+                methods:{ 
+                    tabSelected:function(ele){
+                        this.currentGroup = ele.num;
+                        this.currentGroupData = this.guideTabGroupListData.filter((a) => a.num == this.currentGroup)[0].data;
+                    }
+                }
+            });
+        </script>
+
+    </body>
+
+</html>
