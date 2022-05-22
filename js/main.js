@@ -89,8 +89,17 @@ $(document).ready(function(){
 		vue.tabSelected(element);
 		$(".guideTabItem[data-num$=" + element.num + "]")[0].click();
 
+		// document.getElementById(actualText).scrollIntoView();
+		// document.getElementById(actualText).scrollIntoView();
+
 		vue.$nextTick(() => {
-      		document.getElementById(actualText).scrollIntoView();
+			var cur = document.getElementById(actualText);
+      		cur.scrollIntoView();
+      		
+      		$(cur).addClass('shadow-pulse');
+			$(cur).on('animationend', function(){    
+				$(cur).removeClass('shadow-pulse');
+			});
     	});	
 	});
 });
