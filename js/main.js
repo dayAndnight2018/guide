@@ -52,6 +52,7 @@ function set16ToRgb(str){
 
 
 $(document).ready(function(){
+
 	$(".guideTabItem").click(function(){
 		$(this).addClass("activeGuideTabItem");
 		$(this).find("a").addClass("activeGuideTabItemLink");
@@ -64,12 +65,18 @@ $(document).ready(function(){
 
 	$("#confirmButton").click(function(){
 		let content = $("#searchBox").val();
+		if (content == null && content == undefined && content == ""){
+			return;
+		}
+
 		var element = null;
+		var actualText = null;
 		// = vue.guideTabGroupListData.filter((a) => a.data.filter(ele => ele.alt.endsWith(content)))[0];
 		for (var i =0; i < vue.guideTabGroupListData.length; i++) {
 			for (var j = 0; j < vue.guideTabGroupListData[i].data.length; j++) {
 				if (vue.guideTabGroupListData[i].data[j].alt.indexOf(content) != -1){
 					element = vue.guideTabGroupListData[i];
+					actualText = vue.guideTabGroupListData[i].data[j].alt;
 					break;
 				}
 			}
@@ -81,6 +88,9 @@ $(document).ready(function(){
 
 		vue.tabSelected(element);
 		$(".guideTabItem[data-num$=" + element.num + "]")[0].click();
-		document.getElementById($(this).text()).scrollIntoView();
+
+		vue.$nextTick(() => {
+      		document.getElementById(actualText).scrollIntoView();
+    	});	
 	});
 });
