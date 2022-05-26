@@ -51,11 +51,15 @@ html{
 	color: #C5CD7C;
 }
 
+.fullHeight{
+	height: 100%;
+}
+
 .addressList{
 	margin: 40px auto;
-	max-height: 70%;
-	height: 70%;
 	display: flex;
+	height: 60%;
+	overflow: auto;
 	flex-direction: row;
 	justify-content: space-between;
 }
@@ -101,7 +105,7 @@ html{
 	color: black;
 }
 
-.guideDetailList{
+/*.guideDetailList{
 	width: 90%;
     padding: 10px;
     background: var(--basic-fg-color);
@@ -114,13 +118,13 @@ html{
 	justify-content: center;
 
 	overflow-y: scroll;
-}
+}*/
 
 .guideDetailList::-webkit-scrollbar{
 	width: 0px;
 }
 
-.guideDetail{
+/*.guideDetail{
 	width: 100%;
 	height: 80px;
 	margin: 1% auto;
@@ -132,7 +136,148 @@ html{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
+}*/
+
+@media only screen and (max-width: 600px) {
+    .guideDetail{
+		width: 100%;
+		min-height: 150px;
+		margin: 5px auto;
+		box-shadow: 1px 1px 2px 2px silver;
+	    border-radius: 10px;
+	    padding: 2px;
+
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.guideDetailContent{
+		flex: 3;
+		width: 100%;
+		padding: 5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+	.guideDetailList{
+		width: 90%;
+	    padding: 10px;
+	    background: var(--basic-fg-color);
+
+		display: grid;
+		grid-template-columns: repeat(auto-fill,  45%);
+		grid-template-rows: repeat(auto-fill, 150px);
+		column-gap: 20px;
+		grid-row-gap: 20px;
+		justify-content: center;
+
+		overflow-y: scroll;
+	}
+	.guideDetailAltWrapper{
+		color: var(--basic-ff-color);
+		display: inline-block; 
+		overflow: hidden;
+	    width: 90%;
+	    margin: 0px auto;
+	}
 }
+
+@media only screen and (min-width: 600px) {
+    .guideDetail{
+		width: 100%;
+		height: 80px;
+		margin: 1% auto;
+		box-shadow: 1px 1px 2px 2px silver;
+	    border-radius: 10px;
+	    padding: 2px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+	.guideDetailContent{
+		flex: 3;
+		width: 0;
+		padding: 5px;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.guideDetailList{
+		width: 90%;
+	    padding: 10px;
+	    background: var(--basic-fg-color);
+
+		display: grid;
+		grid-template-columns: repeat(auto-fill,  20%);
+		grid-template-rows: repeat(auto-fill, 80px);
+		column-gap: 2%;
+		grid-row-gap: 20px;
+		justify-content: center;
+
+		overflow-y: scroll;
+	}
+	.guideDetailAltWrapper{
+		color: var(--basic-ff-color);
+		display: inline-block; 
+		overflow: hidden;
+	    width: 70%;
+	    margin: 0px auto;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+    .guideDetail{
+		width: 100%;
+		height: 80px;
+		margin: 1% auto;
+		box-shadow: 1px 1px 2px 2px silver;
+	    border-radius: 10px;
+	    padding: 2px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+	}
+
+	.guideDetailContent{
+		flex: 3;
+		width: 0;
+		padding: 5px;
+		flex-shrink: 0;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.guideDetailList{
+		width: 90%;
+	    padding: 10px;
+	    background: var(--basic-fg-color);
+
+		display: grid;
+		grid-template-columns: repeat(auto-fill,  20%);
+		grid-template-rows: repeat(auto-fill, 80px);
+		column-gap: 2%;
+		grid-row-gap: 20px;
+		justify-content: center;
+
+		overflow-y: scroll;
+	}
+	.guideDetailAltWrapper{
+		color: var(--basic-ff-color);
+		display: inline-block; 
+		overflow: hidden;
+	    width: 70%;
+	    margin: 0px auto;
+	}
+} 
 
 .guideDetailImg{
 	width: 64px;
@@ -151,13 +296,13 @@ html{
 	text-overflow:ellipsis
 }
 
-.guideDetailAltWrapper{
+/*.guideDetailAltWrapper{
 	color: var(--basic-ff-color);
 	display: inline-block; 
 	overflow: hidden;
     width: 70%;
     margin: 0px auto;
-}
+}*/
 
 .guideDatilAlt{
 	width: 100%;
@@ -168,7 +313,7 @@ html{
 	text-overflow:ellipsis
 }
 
-.guideDetailContent{
+/*.guideDetailContent{
 	flex: 3;
 	width: 0;
 	padding: 5px;
@@ -177,7 +322,7 @@ html{
 	flex-direction: column;
 	justify-content: space-between;
 	align-items: flex-start;
-}
+}*/
 
 
 @keyframes shadowPulse {
