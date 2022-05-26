@@ -5,7 +5,7 @@
         <link rel="stylesheet" href="css/fontIcon.css" />
         <link rel="stylesheet" href="css/fontAwsome.css" />
         <link rel="stylesheet" href="css/bulma.css" />
-        <link rel="stylesheet" href="css/main.css" />
+        <link rel="stylesheet" href="css/main1.css" />
         <script src="js/vue.js"></script>
         <script src="js/vueResource.js"></script>
         <script src="js/jquery.js"></script>
@@ -16,17 +16,22 @@
     </head>
 
     <body>
-        <div id="app" class="centerParent fullWidth fullHeight">
-            <main class="centerParent fullWidth fullHeight centerContent">
-                <h1 class="title is-1" :style="foreColor" >Guide</h1>
+        <div id="app" class="container has-text-centered">
+            <div class="columns has-text-centered fivePrecentMarginTop">
+                <main class="column is-12">
+                <h1 class="title is-1 has-text-centered" :style="foreColor" >Guide</h1>
                 
-                <div>
-                    <input id="searchBox" class="input is-large" > </input>
-                    <button id="confirmButton" class="button is-large">Search</button>
+                <div class="columns is-centered has-text-centered is-mobile">
+                    <div class="column is-6-desktop is-7-mobile is-7-tablet has-text-centered">
+                        <input id="searchBox" class="input is-medium" />
+                    </div>
+                    <div class="column is-2-desktop is-3-mobile is-3-tablet">
+                        <button id="confirmButton" class="button is-medium">Search</button>
+                    </div>
                 </div>
 
-                <div class="addressList">
-                    <ul class="guideTab">
+                <div class="addressList columns is-10-desktop is-11-mobile is-10-tablet">
+                    <ul class="guideTab column is-1-desktop is-3-mobile is-1-tablet">
                         <li v-for="ele in guideTabListData" class="guideTabItem" v-on:click="tabSelected(ele)" :data-num="ele.num">
                             <a>
                                 <span>{{ele.title}}</span>
@@ -34,18 +39,23 @@
                         </li>
                     </ul>
 
-                    <div class="guideDetailList">
+                    <div class="guideDetailList column is-11-desktop is-9-mobile is-11-tablet">
                         <div class="guideDetail" v-for="ele in currentGroupData" 
                     v-show="currentGroup != null" :id="ele.alt">
-                            <img class="guideDetailImg" :src="ele.img">
+                            <a :href="ele.src">
+                                <img class="guideDetailImg" :src="ele.img">
+                            </a>
                             <div class="guideDetailContent">
-                                <h3 class="guideDetailAlt">{{ele.alt}}</h3>
+                                <a :href="ele.src" class="guideDetailAltWrapper">
+                                    <h3 class="guideDatilAlt">{{ele.alt}}</h3>
+                                </a>
                                 <a class="guideDetailLink" :href="ele.src">{{ele.src}}</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </main>
+            </div>
         </div>
 
         <script type="text/javascript">
