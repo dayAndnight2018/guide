@@ -102,12 +102,6 @@ let movies = [
 				alt: '铁人影院'
 			},
 			{
-				num: 5,
-				img: 'img/2.5.png',
-				src: 'https://rawchen.com/relax/',
-				alt: '白噪声'
-			},
-			{
 				num: 6,
 				img: 'img/2.6.png',
 				src: 'https://www.bingdou.wang/live',
