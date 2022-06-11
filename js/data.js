@@ -415,7 +415,24 @@ let tools = [
 				src: 'https://www.sojson.com/',
 				alt: 'Json在线解析'
 			},
-
+            {
+				num: 29,
+				img: 'img/4.29.png',
+				src: 'https://xclient.info/',
+				alt: '精品Mac应用'
+			},
+            {
+				num: 30,
+				img: 'img/4.30.png',
+				src: 'https://mirrors.tuna.tsinghua.edu.cn/',
+				alt: '清华镜像'
+			},
+            {
+				num: 31,
+				img: 'img/4.31.png',
+				src: 'https://mirrors.huaweicloud.com/home',
+				alt: '华为镜像'
+			},
 			
 			
 		]
