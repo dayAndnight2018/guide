@@ -86,7 +86,7 @@ let movies = [
 			{
 				num: 2,
 				img: 'img/default.png',
-				src: 'https://www.zhenbuka3.com/',
+				src: 'https://www.zhenbuka5.com/',
 				alt: '真不卡'
 			},
 			{
