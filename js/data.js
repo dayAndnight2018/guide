@@ -15,6 +15,10 @@ let guideTabListData = [
     {
     	title: '在线工具',
     	num: 4,
+    },
+    {
+        title: '在线娱乐',
+        num: 5,
     }
 ];
 
@@ -433,7 +437,22 @@ let tools = [
 	}
 ]
 
+let amusement = [
+	{
+		num: 5,
+		data:[
+			{
+				num: 1,
+				img: 'img/default.png',
+				src: 'https://www.polkadotgame.com/',
+				alt: '夹缝中生存'
+			}			
+		]
+	}
+]
+
 guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
+guideTabGroupListData = guideTabGroupListData.concat(amusement);
