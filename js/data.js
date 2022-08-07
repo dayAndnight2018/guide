@@ -67,7 +67,13 @@ let learning = [
 				img: 'img/1.6.png',
 				src: 'https://www.bilibili.com/video/BV18L4y1p7n8?spm_id_from=333.337.search-card.all.click',
 				alt: '科目三视频'
-			}
+			},
+            {
+                num: 8,
+                img: 'img/default.png',
+                src: 'https://hipstersound.com/ambience.html',
+                alt: '白噪声'
+            }
 			
 		]
 	}
