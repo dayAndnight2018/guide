@@ -84,12 +84,6 @@ let movies = [
 				alt: '行客影视'
 			},
 			{
-				num: 2,
-				img: 'img/default.png',
-				src: 'https://www.zhenbuka5.com/',
-				alt: '真不卡'
-			},
-			{
 				num: 3,
 				img: 'img/2.3.png',
 				src: 'http://www.gjw123.com/tools-dyss',
@@ -270,12 +264,6 @@ let tools = [
 				img: 'img/4.4.png',
 				src: 'https://www.toolnb.com/',
 				alt: '爱资料在线工具'
-			},
-			{
-				num: 5,
-				img: 'img/4.5.png',
-				src: 'https://tools.sixyin.com/',
-				alt: '六音工具箱'
 			},
 			{
 				num: 6,
