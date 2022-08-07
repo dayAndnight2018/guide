@@ -77,6 +77,18 @@ let learning = [
                 img: 'img/default.png',
                 src: 'https://hipstersound.com/ambience.html',
                 alt: '白噪声'
+            },
+            {
+                num: 9,
+                img: 'img/default.png',
+                src: 'https://tool.lu/timestamp/',
+                alt: '在线时间戳转换'
+            },
+            {
+                num: 10,
+                img: 'img/default.png',
+                src: 'https://www.processon.com/',
+                alt: '在线流程图'
             }
 			
 		]
@@ -241,7 +253,22 @@ let books = [
 				img: 'img/default.png',
 				src: 'https://ifeve.com/',
 				alt: '并发编程网'			
-			}
+			},{
+                num: 21,
+                img: 'img/default.png',
+                src: 'https://www.book123.info/',
+                alt: '无名图书'
+            },{
+                num: 22,
+                img: 'img/default.png',
+                src: 'https://www.soepub.com/',
+                alt: '掌上书苑'
+            },{
+                num: 23,
+                img: 'img/default.png',
+                src: 'https://foxgreat.com/',
+                alt: 'foxgreat'
+            }
 	
 		]
 	}
@@ -430,9 +457,17 @@ let tools = [
 				img: 'img/4.31.png',
 				src: 'https://mirrors.huaweicloud.com/home',
 				alt: '华为镜像'
-			},
-			
-			
+			},{
+				num: 32,
+				img: 'img/default.png',
+				src: 'https://www.16personalities.com/ch',
+				alt: '十六种人格'
+			},{
+                num: 33,
+                img: 'img/default.png',
+                src: 'https://studio.metamaker.cn/#/cover',
+                alt: '企业卡通形象'
+            }	
 		]
 	}
 ]
