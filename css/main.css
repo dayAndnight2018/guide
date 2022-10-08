@@ -60,9 +60,9 @@ html{
 }
 
 .addressList{
-	margin: 40px auto;
+	margin: 0px auto;
 	display: flex;
-	height: 60%;
+	height: 70%;
 	overflow: auto;
 	flex-direction: row;
 	justify-content: space-between;
@@ -94,7 +94,7 @@ html{
 
 .guideTabItem{
 	margin: 2px 5px;
-	padding: 5px;
+	padding: 2px;
 }
 
 .guideTabItem:hover{
