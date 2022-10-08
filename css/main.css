@@ -157,7 +157,6 @@ html{
 		align-items: center;
 	}
 	.guideDetailContent{
-		flex: 3;
 		width: 100%;
 		padding: 5px;
 		display: flex;
