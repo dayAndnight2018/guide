@@ -43,12 +43,6 @@ let learning = [
 				alt: 'cnblogs'
 			},
 			{
-				num: 3,
-				img: 'img/1.3.png',
-				src: 'https://www.learnfk.com/',
-				alt: '无涯教程'
-			},
-			{
 				num: 4,
 				img: 'img/default.png',
 				src: 'https://www.geeksforgeeks.org/',
@@ -209,12 +203,6 @@ let books = [
 				img: 'img/3.12.png',
 				src: 'http://www.dushu369.com/',
 				alt: '读书369'			
-			},
-			{
-				num: 13,
-				img: 'img/3.13.png',
-				src: 'https://elib.cc/',
-				alt: 'elib'			
 			},
 			{
 				num: 14,
