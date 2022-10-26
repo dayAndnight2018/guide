@@ -217,12 +217,6 @@ let books = [
 				alt: '雅书'			
 			},
 			{
-				num: 16,
-				img: 'img/3.16.png',
-				src: 'https://itpcb.com/',
-				alt: 'itpcb'			
-			},
-			{
 				num: 17,
 				img: 'img/default.png',
 				src: 'https://goalkicker.com/',
