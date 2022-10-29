@@ -83,7 +83,12 @@ let learning = [
                 img: 'img/default.png',
                 src: 'https://www.processon.com/',
                 alt: '在线流程图'
-            }
+            },{
+				num: 11,
+				img: 'img/1.1.png',
+				src: 'http://everspringlee.gitee.io/online-music',
+				alt: '云音乐'
+			}
 			
 		]
 	}
