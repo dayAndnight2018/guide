@@ -121,12 +121,6 @@ let movies = [
 				img: 'img/2.6.png',
 				src: 'https://www.bingdou.wang/live',
 				alt: '冰豆直播'
-			},
-			{
-				num: 7,
-				img: 'img/2.7.png',
-				src: 'https://icaqd.com/',
-				alt: '555影视网'
 			}
 	
 		]
