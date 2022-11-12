@@ -198,18 +198,6 @@ let books = [
 				alt: 'JavaNote'			
 			},
 			{
-				num: 12,
-				img: 'img/3.12.png',
-				src: 'http://www.dushu369.com/',
-				alt: '读书369'			
-			},
-			{
-				num: 14,
-				img: 'img/3.14.png',
-				src: 'https://zh.zlibrary.org/',
-				alt: 'zlibrary'			
-			},
-			{
 				num: 15,
 				img: 'img/3.15.png',
 				src: 'https://yabook.blog/',
