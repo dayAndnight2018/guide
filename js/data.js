@@ -150,12 +150,6 @@ let books = [
 				alt: '知识库'			
 			},
 			{
-				num: 5,
-				img: 'img/3.5.png',
-				src: 'http://www.iebukes.com/',
-				alt: 'iebukes'			
-			},
-			{
 				num: 6,
 				img: 'img/3.6.png',
 				src: 'https://www.bookstack.cn/',
