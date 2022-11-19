@@ -15,11 +15,11 @@ let guideTabListData = [
     {
     	title: '在线工具',
     	num: 4,
-    },
+    }/*,
     {
         title: '在线娱乐',
         num: 5,
-    }
+    }*/
 ];
 
 
@@ -148,12 +148,6 @@ let books = [
 				img: 'img/3.3.png',
 				src: 'https://book.zhishikoo.com/',
 				alt: '知识库'			
-			},
-			{
-				num: 4,
-				img: 'img/3.4.png',
-				src: 'https://coderprog.com/',
-				alt: 'coderprog'			
 			},
 			{
 				num: 5,
@@ -463,4 +457,4 @@ guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
-guideTabGroupListData = guideTabGroupListData.concat(amusement);
+// guideTabGroupListData = guideTabGroupListData.concat(amusement);
