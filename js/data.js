@@ -174,12 +174,6 @@ let books = [
 				alt: 'sobooks'			
 			},
 			{
-				num: 10,
-				img: 'img/3.10.png',
-				src: 'https://www.cmsblogs.com/',
-				alt: 'Java技术驿站'			
-			},
-			{
 				num: 11,
 				img: 'img/3.11.png',
 				src: 'https://javanote.doc.lewky.cn/#/README',
