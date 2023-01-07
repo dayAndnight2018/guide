@@ -186,12 +186,6 @@ let books = [
 				alt: 'JavaNote'			
 			},
 			{
-				num: 15,
-				img: 'img/3.15.png',
-				src: 'https://yabook.blog/',
-				alt: '雅书'			
-			},
-			{
 				num: 17,
 				img: 'img/default.png',
 				src: 'https://goalkicker.com/',
