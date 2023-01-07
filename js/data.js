@@ -168,12 +168,6 @@ let books = [
 				alt: 'PDF下载之家'			
 			},
 			{
-				num: 9,
-				img: 'img/3.9.png',
-				src: 'https://sobooks.net/',
-				alt: 'sobooks'			
-			},
-			{
 				num: 11,
 				img: 'img/3.11.png',
 				src: 'https://javanote.doc.lewky.cn/#/README',
