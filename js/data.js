@@ -202,11 +202,6 @@ let books = [
                 src: 'https://www.book123.info/',
                 alt: '无名图书'
             },{
-                num: 22,
-                img: 'img/default.png',
-                src: 'https://www.soepub.com/',
-                alt: '掌上书苑'
-            },{
                 num: 23,
                 img: 'img/default.png',
                 src: 'https://foxgreat.com/',
