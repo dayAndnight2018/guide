@@ -206,6 +206,16 @@ let books = [
                 img: 'img/default.png',
                 src: 'https://foxgreat.com/',
                 alt: 'foxgreat'
+            },{
+                num: 24,
+                img: 'img/3.24.png',
+                src: 'https://book.pep.com.cn/',
+                alt: '人民教育出版社'
+            },{
+                num: 25,
+                img: 'img/3.25.png',
+                src: 'https://www.zxx.edu.cn/',
+                alt: '国家中小学智慧教育平台'
             }
 	
 		]
