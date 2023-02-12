@@ -216,6 +216,11 @@ let books = [
                 img: 'img/3.25.png',
                 src: 'https://www.zxx.edu.cn/',
                 alt: '国家中小学智慧教育平台'
+            },{
+                num: 25,
+                img: 'img/default.png',
+                src: 'https://www.sxpdf.com/',
+                alt: '书行天下'
             }
 	
 		]
@@ -415,7 +420,12 @@ let tools = [
                 img: 'img/default.png',
                 src: 'https://studio.metamaker.cn/#/cover',
                 alt: '企业卡通形象'
-            }	
+            },{
+                num: 33,
+                img: 'img/default.png',
+                src: 'https://imgse.com/',
+                alt: '路过图床'
+            }
 		]
 	}
 ]
