@@ -15,11 +15,11 @@ let guideTabListData = [
     {
     	title: '在线工具',
     	num: 4,
-    }/*,
+    },
     {
         title: '在线娱乐',
         num: 5,
-    }*/
+    }
 ];
 
 
@@ -217,7 +217,7 @@ let books = [
                 src: 'https://www.zxx.edu.cn/',
                 alt: '国家中小学智慧教育平台'
             },{
-                num: 25,
+                num: 26,
                 img: 'img/default.png',
                 src: 'https://www.sxpdf.com/',
                 alt: '书行天下'
@@ -421,9 +421,14 @@ let tools = [
                 src: 'https://studio.metamaker.cn/#/cover',
                 alt: '企业卡通形象'
             },{
-                num: 33,
+                num: 34,
                 img: 'img/default.png',
                 src: 'https://imgse.com/',
+                alt: '路过图床'
+            },{
+                num: 35,
+                img: 'img/default.png',
+                src: 'https://tools.sixyin.com/',
                 alt: '路过图床'
             }
 		]
@@ -437,8 +442,8 @@ let amusement = [
 			{
 				num: 1,
 				img: 'img/default.png',
-				src: 'https://www.polkadotgame.com/',
-				alt: '夹缝中生存'
+				src: 'https://tool.liumingye.cn/music/#/',
+				alt: 'MyFreeMP3'
 			}			
 		]
 	}
@@ -448,4 +453,4 @@ guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
-// guideTabGroupListData = guideTabGroupListData.concat(amusement);
+guideTabGroupListData = guideTabGroupListData.concat(amusement);
