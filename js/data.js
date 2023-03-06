@@ -221,7 +221,13 @@ let books = [
                 img: 'img/default.png',
                 src: 'https://www.sxpdf.com/',
                 alt: '书行天下'
+            },{
+                num: 27,
+                img: 'img/default.png',
+                src: 'https://oceanofpdf.com/',
+                alt: 'PDF海洋'
             }
+            
 	
 		]
 	}
