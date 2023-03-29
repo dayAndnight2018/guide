@@ -226,9 +226,12 @@ let books = [
                 img: 'img/default.png',
                 src: 'https://oceanofpdf.com/',
                 alt: 'PDF海洋'
-            }
-            
-	
+            },{
+                num: 28,
+                img: 'img/default.png',
+                src: 'https://1lib.tk/',
+                alt: 'Z-lib镜像站'
+            }	
 		]
 	}
 ]
