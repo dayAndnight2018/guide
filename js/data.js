@@ -209,7 +209,7 @@ let books = [
             },{
                 num: 24,
                 img: 'img/3.24.png',
-                src: 'https://book.pep.com.cn/',
+                src: 'https://jc.pep.com.cn/',
                 alt: '人民教育出版社'
             },{
                 num: 25,
