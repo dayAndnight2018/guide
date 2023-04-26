@@ -3,8 +3,18 @@ function setRgbColor(){
     var g = parseInt(Math.random() * 256);
     var b = parseInt(Math.random() * 256);
     var color = "#" + r.toString(16) + g.toString(16) + b.toString(16);
-    document.body.style.backgroundColor = "#3B3283";
     document.body.style.color = "#C5CD7C";
+    let colorList = [
+        "linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%)",
+        "linear-gradient(120deg, #22E1FF 0%, #1D8FE1 48%, #625EB1 100%)",
+        "linear-gradient(120deg, #3D4E81 0%, #5753C9 48%, #6E7FF3 100%)",
+        "linear-gradient(120deg, #209cff 0%, #68e0cf 100%)",
+        "linear-gradient(120deg, #96deda 0%, #50c9c3 100%)",
+        "linear-gradient(120deg, #007adf 0%, #00ecbc 100%)",
+        "linear-gradient(120deg, #6a11cb 0%, #2575fc 100%)"
+    ]
+    let index = Math.floor(Math.random()*colorList.length)
+    document.body.style.backgroundColor = colorList[index];
 }
 
 function colorReverse(oldColor){
