@@ -10,7 +10,7 @@ body{
 html{
 	background: #3B3283;
 	--basic-bg-color: #3B3283;
-	--basic-fg-color: white;
+	--basic-fg-color: #EEFFFFFF;
 	--basic-ff-color: #C5CD7C;
 }
 
