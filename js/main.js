@@ -15,7 +15,7 @@ function setRgbColor(){
     ]
     let index = Math.floor(Math.random()*colorList.length)
     document.body.style.backgroundImage = colorList[index];
-    document.getElementsByClassName("guideTab")[0].style.backgroundImage = colorList[index];
+    document.getElementsByClassName("guideTab")[0].style.backgroundImage = colorList[(index+1)%colorList.length];
 }
 
 function colorReverse(oldColor){
