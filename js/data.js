@@ -103,8 +103,58 @@ let learning = [
                 img: 'img/default.png',
                 src: 'https://doocs.gitee.io/leetcode/#/',
                 alt: '算法题系列'
+            },{
+                num: 15,
+                img: 'img/default.png',
+                src: 'https://hellokoding.com/',
+                alt: 'HelloKoding'
+            },{
+                num: 16,
+                img: 'img/default.png',
+                src: 'https://doocs.gitee.io/advanced-java/#/',
+                alt: '面试扫盲'
+            },{
+                num: 17,
+                img: 'img/default.png',
+                src: 'https://labuladong.gitee.io/algo/',
+                alt: 'labuladong刷题'
+            },{
+                num: 18,
+                img: 'img/default.png',
+                src: 'https://doocs.github.io/jvm/00-quickstart.html',
+                alt: 'JVM解析'
+            },{
+                num: 19,
+                img: 'img/default.png',
+                src: 'https://javanote.doc.lewky.cn/#/README',
+                alt: 'JAVA Note'
+            },{
+                num: 20,
+                img: 'img/default.png',
+                src: 'http://www.cyc2018.xyz/',
+                alt: 'JAVA八股文'
+            },{
+                num: 21,
+                img: 'img/default.png',
+                src: 'https://crossoverjie.top/JCSprout/#/',
+                alt: 'JCSprout'
+            },{
+                num: 22,
+                img: 'img/default.png',
+                src: 'https://tobebetterjavaer.com/home.html',
+                alt: 'JAVA进阶'
+            },{
+                num: 23,
+                img: 'img/default.png',
+                src: 'https://javaguide.cn/home.html',
+                alt: 'JAVA Guide'
+            },{
+                num: 24,
+                img: 'img/default.png',
+                src: 'https://pdai.tech/',
+                alt: 'JAVA 全栈'
             }
-			
+            
 		]
 	}
 ]
@@ -246,7 +296,18 @@ let books = [
                 img: 'img/default.png',
                 src: 'https://1lib.tk/',
                 alt: 'Z-lib镜像站'
-            }	
+            },{
+                num: 29,
+                img: 'img/default.png',
+                src: 'https://www.werebook.com/',
+                alt: '书堆阅读'
+            },{
+                num: 30,
+                img: 'img/default.png',
+                src: 'https://www.sulery.com/',
+                alt: '书乐里'
+            }
+            
 		]
 	}
 ]
@@ -454,6 +515,11 @@ let tools = [
                 img: 'img/default.png',
                 src: 'https://tools.sixyin.com/',
                 alt: '六音工具箱'
+            },{
+                num: 36,
+                img: 'img/default.png',
+                src: 'https://www.jq22.com/',
+                alt: 'Jquery效果' 
             }
 		]
 	}
