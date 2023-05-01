@@ -88,7 +88,22 @@ let learning = [
 				img: 'img/default.png',
 				src: 'http://everspringlee.gitee.io/online-music',
 				alt: '云音乐'
-			}
+			},{
+                num: 12,
+                img: 'img/default.png',
+                src: 'https://books.halfrost.com/leetcode/ChapterTwo/Array/',
+                alt: 'Leetcode解析'
+            },{
+                num: 13,
+                img: 'img/default.png',
+                src: 'https://doocs.gitee.io/source-code-hunter/#/',
+                alt: '源码系列'
+            },{
+                num: 14,
+                img: 'img/default.png',
+                src: 'https://doocs.gitee.io/leetcode/#/',
+                alt: '算法题系列'
+            }
 			
 		]
 	}
