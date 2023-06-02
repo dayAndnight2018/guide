@@ -520,6 +520,11 @@ let tools = [
                 img: 'img/default.png',
                 src: 'https://www.jq22.com/',
                 alt: 'Jquery效果' 
+            },{
+                num: 37,
+                img: 'img/default.png',
+                src: 'https://www.diffchecker.com/text-compare/',
+                alt: '在线diff'
             }
 		]
 	}
