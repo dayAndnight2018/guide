@@ -341,12 +341,6 @@ let tools = [
 				alt: '爱资料在线工具'
 			},
 			{
-				num: 6,
-				img: 'img/default.png',
-				src: 'https://www.vmgirls.com/',
-				alt: '唯美女生壁纸'
-			},
-			{
 				num: 7,
 				img: 'img/default.png',
 				src: 'https://onlineconvertfree.com/',
@@ -365,12 +359,6 @@ let tools = [
 				alt: '优美图库'
 			},
 			{
-				num: 10,
-				img: 'img/4.10.png',
-				src: 'https://t2cy.com/',
-				alt: '推次元'
-			},
-			{
 				num: 11,
 				img: 'img/default.png',
 				src: 'https://www.yalayi.com/',
@@ -381,12 +369,6 @@ let tools = [
 				img: 'img/4.12.png',
 				src: 'http://www.netbian.com/',
 				alt: '彼岸壁纸'
-			},
-			{
-				num: 13,
-				img: 'img/4.13.png',
-				src: 'https://mobile.alphacoders.com/',
-				alt: 'alphacoders'
 			},
 			{
 				num: 14,
@@ -441,12 +423,6 @@ let tools = [
 				img: 'img/default.png',
 				src: 'http://suxieban.com/#',
 				alt: '在线画板'
-			},
-			{
-				num: 23,
-				img: 'img/default.png',
-				src: 'https://dimgw.us/',
-				alt: 'DIMG'
 			},
 			{
 				num: 24,
