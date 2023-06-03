@@ -39,19 +39,19 @@ let learning = [
 			{
 				num: 2,
 				img: 'img/1.1.png',
-				src: 'https://www.cnblogs.com/',
+				src: 'https://www.cnblogs.com',
 				alt: 'cnblogs'
 			},
 			{
 				num: 4,
 				img: 'img/default.png',
-				src: 'https://www.geeksforgeeks.org/',
+				src: 'https://www.geeksforgeeks.org',
 				alt: '极客算法'
 			},
 			{
 				num: 5,
 				img: 'img/1.5.png',
-				src: 'https://mvnrepository.com/',
+				src: 'https://mvnrepository.com',
 				alt: 'maven库'
 			},
 			{
@@ -75,13 +75,13 @@ let learning = [
             {
                 num: 9,
                 img: 'img/default.png',
-                src: 'https://tool.lu/timestamp/',
+                src: 'https://tool.lu/timestamp',
                 alt: '在线时间戳转换'
             },
             {
                 num: 10,
                 img: 'img/default.png',
-                src: 'https://www.processon.com/',
+                src: 'https://www.processon.com',
                 alt: '在线流程图'
             },{
 				num: 11,
@@ -91,32 +91,32 @@ let learning = [
 			},{
                 num: 12,
                 img: 'img/default.png',
-                src: 'https://books.halfrost.com/leetcode/ChapterTwo/Array/',
+                src: 'https://books.halfrost.com/leetcode/ChapterTwo/Array',
                 alt: 'Leetcode解析'
             },{
                 num: 13,
                 img: 'img/default.png',
-                src: 'https://doocs.gitee.io/source-code-hunter/#/',
+                src: 'https://doocs.gitee.io/source-code-hunter',
                 alt: '源码系列'
             },{
                 num: 14,
                 img: 'img/default.png',
-                src: 'https://doocs.gitee.io/leetcode/#/',
+                src: 'https://doocs.gitee.io/leetcode',
                 alt: '算法题系列'
             },{
                 num: 15,
                 img: 'img/default.png',
-                src: 'https://hellokoding.com/',
+                src: 'https://hellokoding.com',
                 alt: 'HelloKoding'
             },{
                 num: 16,
                 img: 'img/default.png',
-                src: 'https://doocs.gitee.io/advanced-java/#/',
+                src: 'https://doocs.gitee.io/advanced-java',
                 alt: '面试扫盲'
             },{
                 num: 17,
                 img: 'img/default.png',
-                src: 'https://labuladong.gitee.io/algo/',
+                src: 'https://labuladong.gitee.io/algo',
                 alt: 'labuladong刷题'
             },{
                 num: 18,
@@ -131,12 +131,12 @@ let learning = [
             },{
                 num: 20,
                 img: 'img/default.png',
-                src: 'http://www.cyc2018.xyz/',
+                src: 'http://www.cyc2018.xyz',
                 alt: 'JAVA八股文'
             },{
                 num: 21,
                 img: 'img/default.png',
-                src: 'https://crossoverjie.top/JCSprout/#/',
+                src: 'https://crossoverjie.top/JCSprout',
                 alt: 'JCSprout'
             },{
                 num: 22,
@@ -151,7 +151,7 @@ let learning = [
             },{
                 num: 24,
                 img: 'img/default.png',
-                src: 'https://pdai.tech/',
+                src: 'https://pdai.tech',
                 alt: 'JAVA 全栈'
             }
             
@@ -166,7 +166,7 @@ let movies = [
 			{
 				num: 1,
 				img: 'img/2.1.png',
-				src: 'http://www.runker.online/',
+				src: 'http://www.runker.online',
 				alt: '行客影视'
 			},
 			{
@@ -178,7 +178,7 @@ let movies = [
 			{
 				num: 4,
 				img: 'img/2.4.png',
-				src: 'http://www.tieren5.com/',
+				src: 'http://www.tieren5.com',
 				alt: '铁人影院'
 			},
 			{
@@ -199,31 +199,31 @@ let books = [
 			{
 				num: 1,
 				img: 'img/3.1.png',
-				src: 'https://salttiger.com/archives/',
+				src: 'https://salttiger.com/archives',
 				alt: '盐老虎'
 			},
 			{
 				num: 2,
 				img: 'img/default.png',
-				src: 'https://www.letmeread.net/',
+				src: 'https://www.letmeread.net',
 				alt: 'letmeread'
 			},
 			{
 				num: 3,
 				img: 'img/3.3.png',
-				src: 'https://book.zhishikoo.com/',
+				src: 'https://book.zhishikoo.com',
 				alt: '知识库'			
 			},
 			{
 				num: 6,
 				img: 'img/3.6.png',
-				src: 'https://www.bookstack.cn/',
+				src: 'https://www.bookstack.cn',
 				alt: '书栈网'			
 			},
 			{
 				num: 7,
 				img: 'img/3.7.png',
-				src: 'https://libgen.unblockit.blue/',
+				src: 'https://libgen.unblockit.blue',
 				alt: 'libgen'			
 			},
 			{
@@ -241,7 +241,7 @@ let books = [
 			{
 				num: 17,
 				img: 'img/default.png',
-				src: 'https://goalkicker.com/',
+				src: 'https://goalkicker.com',
 				alt: 'goalkicker'			
 			},
 			{
@@ -253,58 +253,58 @@ let books = [
 			{
 				num: 19,
 				img: 'img/default.png',
-				src: 'http://www.banshujiang.cn/',
+				src: 'http://www.banshujiang.cn',
 				alt: '搬书匠'			
 			},
 			{
 				num: 20,
 				img: 'img/default.png',
-				src: 'https://ifeve.com/',
+				src: 'https://ifeve.com',
 				alt: '并发编程网'			
 			},{
                 num: 21,
                 img: 'img/default.png',
-                src: 'https://www.book123.info/',
+                src: 'https://www.book123.info',
                 alt: '无名图书'
             },{
                 num: 23,
                 img: 'img/default.png',
-                src: 'https://foxgreat.com/',
+                src: 'https://foxgreat.com',
                 alt: 'foxgreat'
             },{
                 num: 24,
                 img: 'img/3.24.png',
-                src: 'https://jc.pep.com.cn/',
+                src: 'https://jc.pep.com.cn',
                 alt: '人民教育出版社'
             },{
                 num: 25,
                 img: 'img/3.25.png',
-                src: 'https://www.zxx.edu.cn/',
+                src: 'https://www.zxx.edu.cn',
                 alt: '国家中小学智慧教育平台'
             },{
                 num: 26,
                 img: 'img/default.png',
-                src: 'https://www.sxpdf.com/',
+                src: 'https://www.sxpdf.com',
                 alt: '书行天下'
             },{
                 num: 27,
                 img: 'img/default.png',
-                src: 'https://oceanofpdf.com/',
+                src: 'https://oceanofpdf.com',
                 alt: 'PDF海洋'
             },{
                 num: 28,
                 img: 'img/default.png',
-                src: 'https://1lib.tk/',
+                src: 'https://1lib.tk',
                 alt: 'Z-lib镜像站'
             },{
                 num: 29,
                 img: 'img/default.png',
-                src: 'https://www.werebook.com/',
+                src: 'https://www.werebook.com',
                 alt: '书堆阅读'
             },{
                 num: 30,
                 img: 'img/default.png',
-                src: 'https://www.sulery.com/',
+                src: 'https://www.sulery.com',
                 alt: '书乐里'
             }
             
@@ -319,7 +319,7 @@ let tools = [
 			{
 				num: 1,
 				img: 'img/4.1.png',
-				src: 'https://www.toolfk.com/',
+				src: 'https://www.toolfk.com',
 				alt: 'tooLFK'
 			},
 			{
@@ -331,19 +331,19 @@ let tools = [
 			{
 				num: 3,
 				img: 'img/default.png',
-				src: 'https://www.iconfont.cn/',
+				src: 'https://www.iconfont.cn',
 				alt: '阿里巴巴Icon'
 			},
 			{
 				num: 4,
 				img: 'img/4.4.png',
-				src: 'https://www.toolnb.com/',
+				src: 'https://www.toolnb.com',
 				alt: '爱资料在线工具'
 			},
 			{
 				num: 7,
 				img: 'img/default.png',
-				src: 'https://onlineconvertfree.com/',
+				src: 'https://onlineconvertfree.com',
 				alt: '在线格式转换'
 			},
 			{
@@ -355,25 +355,25 @@ let tools = [
 			{
 				num: 9,
 				img: 'img/4.9.png',
-				src: 'https://www.umeitu.com/',
+				src: 'https://www.umeitu.com',
 				alt: '优美图库'
 			},
 			{
 				num: 11,
 				img: 'img/default.png',
-				src: 'https://www.yalayi.com/',
+				src: 'https://www.yalayi.com',
 				alt: '雅拉依'
 			},
 			{
 				num: 12,
 				img: 'img/4.12.png',
-				src: 'http://www.netbian.com/',
+				src: 'http://www.netbian.com',
 				alt: '彼岸壁纸'
 			},
 			{
 				num: 14,
 				img: 'img/4.14.png',
-				src: 'https://www.520mojing.com/',
+				src: 'https://www.520mojing.com',
 				alt: '魔镜街拍'
 			},
 			{
@@ -397,7 +397,7 @@ let tools = [
 			{
 				num: 18,
 				img: 'img/4.18.png',
-				src: 'http://tooool.org/',
+				src: 'http://tooool.org',
 				alt: '程序员导航'
 			},
 			{
@@ -409,7 +409,7 @@ let tools = [
 			{
 				num: 20,
 				img: 'img/default.png',
-				src: 'https://www.omegaxyz.com/mypage/wallpaper/',
+				src: 'https://www.omegaxyz.com/mypage/wallpaper',
 				alt: 'wallpaper'
 			},
 			{
@@ -421,49 +421,49 @@ let tools = [
 			{
 				num: 22,
 				img: 'img/default.png',
-				src: 'http://suxieban.com/#',
+				src: 'http://suxieban.com',
 				alt: '在线画板'
 			},
 			{
 				num: 24,
 				img: 'img/4.24.png',
-				src: 'https://www.lanzoui.com/',
+				src: 'https://www.lanzoui.com',
 				alt: '蓝奏云'
 			},
 			{
 				num: 25,
 				img: 'img/4.25.png',
-				src: 'https://www.4kbizhi.com/',
+				src: 'https://www.4kbizhi.com',
 				alt: '高清壁纸'
 			},
 			{
 				num: 26,
 				img: 'img/4.26.png',
-				src: 'https://pic.netbian.com/',
+				src: 'https://pic.netbian.com',
 				alt: '彼岸图网'
 			},
 			{
 				num: 27,
 				img: 'img/4.27.png',
-				src: 'http://bizhi360.com/',
+				src: 'http://bizhi360.com',
 				alt: '壁纸360'
 			},
 			{
 				num: 28,
 				img: 'img/4.28.png',
-				src: 'https://www.sojson.com/',
+				src: 'https://www.sojson.com',
 				alt: 'Json在线解析'
 			},
             {
 				num: 29,
 				img: 'img/4.29.png',
-				src: 'https://xclient.info/',
+				src: 'https://xclient.info',
 				alt: '精品Mac应用'
 			},
             {
 				num: 30,
 				img: 'img/4.30.png',
-				src: 'https://mirrors.tuna.tsinghua.edu.cn/',
+				src: 'https://mirrors.tuna.tsinghua.edu.cn',
 				alt: '清华镜像'
 			},
             {
@@ -484,22 +484,22 @@ let tools = [
             },{
                 num: 34,
                 img: 'img/default.png',
-                src: 'https://imgse.com/',
+                src: 'https://imgse.com',
                 alt: '路过图床'
             },{
                 num: 35,
                 img: 'img/default.png',
-                src: 'https://tools.sixyin.com/',
+                src: 'https://tools.sixyin.com',
                 alt: '六音工具箱'
             },{
                 num: 36,
                 img: 'img/default.png',
-                src: 'https://www.jq22.com/',
+                src: 'https://www.jq22.com',
                 alt: 'Jquery效果' 
             },{
                 num: 37,
                 img: 'img/default.png',
-                src: 'https://www.diffchecker.com/text-compare/',
+                src: 'https://www.diffchecker.com/text-compare',
                 alt: '在线diff'
             }
 		]
@@ -513,7 +513,7 @@ let amusement = [
 			{
 				num: 1,
 				img: 'img/default.png',
-				src: 'https://tool.liumingye.cn/music/#/',
+				src: 'https://tool.liumingye.cn/music',
 				alt: 'MyFreeMP3'
 			}			
 		]
