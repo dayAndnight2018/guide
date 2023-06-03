@@ -80,7 +80,7 @@
                     getFaviconUrl:function(url){
                         let domain = url.split('/'); 
                         if(domain[0] && domain[2]) {
-                            return domain[0] + domain[2] + '/favicon.ico';
+                            return domain[0] + "//" +  domain[2] + '/favicon.ico';
                         }
                         return 'img/default.png';
                     }
