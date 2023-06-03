@@ -43,7 +43,7 @@
                         <div class="guideDetail" v-for="ele in currentGroupData" 
                     v-show="currentGroup != null" :id="ele.alt">
                             <a :href="ele.src">
-                                <img class="guideDetailImg" :src="ele.src + '/favicon.ico'" onerror="javascript:this.src='img/default.png';">
+                                <img class="guideDetailImg" :src="getFaviconUrl(ele.src)" onerror="javascript:this.src='img/default.png';">
                             </a>
                             <div class="guideDetailContent">
                                 <a :href="ele.src" class="guideDetailAltWrapper">
@@ -76,6 +76,13 @@
                     tabSelected:function(ele){
                         this.currentGroup = ele.num;
                         this.currentGroupData = this.guideTabGroupListData.filter((a) => a.num == this.currentGroup)[0].data;
+                    },
+                    getFaviconUrl:function(url){
+                        let domain = url.split(‘/’); 
+                        if(domain[0] && domain[2]) {
+                            return domain[0] + domain[2] + '/favicon.ico';
+                        }
+                        return 'img/default.png';
                     }
                 }
             });
