@@ -78,7 +78,7 @@
                         this.currentGroupData = this.guideTabGroupListData.filter((a) => a.num == this.currentGroup)[0].data;
                     },
                     getFaviconUrl:function(url){
-                        let domain = url.split(‘/’); 
+                        let domain = url.split('/'); 
                         if(domain[0] && domain[2]) {
                             return domain[0] + domain[2] + '/favicon.ico';
                         }
