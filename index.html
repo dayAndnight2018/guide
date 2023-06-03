@@ -43,7 +43,7 @@
                         <div class="guideDetail" v-for="ele in currentGroupData" 
                     v-show="currentGroup != null" :id="ele.alt">
                             <a :href="ele.src">
-                                <img class="guideDetailImg" :src="ele.img">
+                                <img class="guideDetailImg" :src="ele.src + '/favicon.ico'" onerror="javascript:this.src='img/default.png';">
                             </a>
                             <div class="guideDetailContent">
                                 <a :href="ele.src" class="guideDetailAltWrapper">
