@@ -198,9 +198,6 @@ let books = [
                 src: 'https://www.zxx.edu.cn',
                 alt: '国家中小学智慧教育平台'
             },{
-                src: 'https://www.sxpdf.com',
-                alt: '书行天下'
-            },{
                 src: 'https://oceanofpdf.com',
                 alt: 'PDF海洋'
             },{
