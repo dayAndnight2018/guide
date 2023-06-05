@@ -19,7 +19,7 @@
         <div id="app" class="container has-text-centered fullHeight">
             <div class="columns has-text-centered fivePrecentMarginTop fullHeight">
                 <main class="column is-12 fullHeight">
-                <h1 class="title is-1 has-text-centered" :style="foreColor" >Guide</h1>
+                <h1 class="title is-1 has-text-centered">Guide</h1>
                 
                 <div class="columns is-centered has-text-centered is-mobile">
                     <div class="column is-6-desktop is-7-mobile is-7-tablet has-text-centered">
@@ -64,9 +64,6 @@
             var vue = new Vue({
                 el:"#app",
                 data:{
-                    foreColor: {
-                        color: document.body.style.color
-                    },
                     guideTabListData: guideTabListData,
                     guideTabGroupListData: guideTabGroupListData,
                     currentGroup: null,
