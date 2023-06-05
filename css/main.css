@@ -55,8 +55,12 @@ html{
     color: var(--basic-ff-color);
 }
 
-#confirmButton:hover{
+#confirmButton{
 	color: var(--basic-ff-color);
+}
+
+#confirmButton:hover{
+	color: black;
 }
 
 .fullHeight{
