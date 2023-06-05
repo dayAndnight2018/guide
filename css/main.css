@@ -156,9 +156,16 @@ html{
 		justify-content: center;
 		align-items: center;
 	}
+    .guideDetailImg{
+	    width: 32px;
+	    height: 32px;
+	    border-radius: 100%;
+	    flex: 1;
+	    object-fit: contain;
+    }   
 	.guideDetailContent{
 		width: 100%;
-		padding: 5px;
+		padding: 2px;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -166,24 +173,23 @@ html{
 	}
 	.guideDetailList{
 		width: 90%;
-	    padding: 10px;
-	    background: var(--basic-fg-color);
-
-		display: grid;
-		grid-template-columns: repeat(auto-fill,  45%);
-		grid-template-rows: repeat(auto-fill, 150px);
-		column-gap: 20px;
-		grid-row-gap: 20px;
-		justify-content: center;
-
-		overflow-y: scroll;
+        padding: 10px;
+        background: var(--basic-fg-color);
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 30%);
+        grid-template-rows: repeat(auto-fill, 80px);
+        column-gap: 5%;
+        grid-row-gap: 20px;
+        justify-content: center;
+        overflow-y: scroll;
 	}
 	.guideDetailAltWrapper{
 		color: var(--basic-ff-color);
 		display: inline-block; 
 		overflow: hidden;
-	    width: 90%;
+	    width: 100%;
 	    margin: 0px auto;
+        font-size: 0.5rem;
 	}
 }
 
