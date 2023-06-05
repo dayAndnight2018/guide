@@ -8,9 +8,9 @@ body{
 }
 
 html{
-	background: #3B3283;
-	--basic-bg-color: #3B3283;
-	--basic-fg-color: #EEFFFFFF;
+	background: #C4CD7C;
+	--basic-bg-color: #C4CD7C;
+	--basic-fg-color: #FFFFFF;
 	--basic-ff-color: #FA8C35;
 }
 
@@ -51,8 +51,12 @@ html{
 	transform: translateX(-50%) translateY(-50%);
 }
 
+.title{
+    color: var(--basic-ff-color);
+}
+
 #confirmButton:hover{
-	color: #C5CD7C;
+	color: var(--basic-ff-color);
 }
 
 .fullHeight{
