@@ -107,6 +107,9 @@ let learning = [
             },{
                 src: 'https://pdai.tech',
                 alt: 'JAVA 全栈'
+            },{
+                src: 'https://juejin.cn/backend',
+                alt: '掘金'
             }
             
 		]
@@ -342,6 +345,9 @@ let tools = [
             },{
                 src: 'https://www.diffchecker.com/text-compare',
                 alt: '在线diff'
+            },{
+                src: 'https://api.f4team.cn/',
+                alt: '独角兽API'
             }
 		]
 	}
