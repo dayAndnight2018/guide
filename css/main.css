@@ -238,6 +238,13 @@ html{
 	    width: 70%;
 	    margin: 0px auto;
 	}
+    .guideDetailImg{
+	    width: 64px;
+	    height: 64px;
+	    border-radius: 100%;
+	    flex: 1;
+	    object-fit: contain;
+    }  
 }
 
 @media only screen and (min-width: 992px) {
@@ -286,15 +293,15 @@ html{
 	    width: 70%;
 	    margin: 0px auto;
 	}
+    .guideDetailImg{
+	    width: 64px;
+	    height: 64px;
+	    border-radius: 100%;
+	    flex: 1;
+	    object-fit: contain;
+    }  
 } 
 
-.guideDetailImg{
-	width: 64px;
-	height: 64px;
-	border-radius: 100%;
-	flex: 1;
-	object-fit: contain;
-}
 
 .guideDetailLink{
 	width: 100%;
