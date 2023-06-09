@@ -113,6 +113,9 @@ let learning = [
             },{
                 src: 'https://dayAndnight2018.github.io/career-exam',
                 alt: '事业单位'
+            },{
+                src: 'https://tool.chinaz.com/dns?type=a&host=github.com&ip=',
+                alt: 'dns查询'
             }
             
 		]
