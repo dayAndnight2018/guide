@@ -110,6 +110,9 @@ let learning = [
             },{
                 src: 'https://juejin.cn/backend',
                 alt: '掘金'
+            },{
+                src: 'https://dayAndnight2018.github.io/career-exam',
+                alt: '事业单位'
             }
             
 		]
@@ -348,6 +351,9 @@ let tools = [
             },{
                 src: 'https://api.f4team.cn/',
                 alt: '独角兽API'
+            },{
+                src: 'https://www.photopea.com/',
+                alt: '在线PS'
             }
 		]
 	}
