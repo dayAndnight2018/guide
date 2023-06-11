@@ -357,6 +357,9 @@ let tools = [
             },{
                 src: 'https://www.photopea.com/',
                 alt: '在线PS'
+            },{
+                src: 'https://easypdf.com/cn/',
+                alt: '在线PDF转换'
             }
 		]
 	}
