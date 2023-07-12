@@ -212,12 +212,6 @@ let books = [
             },{
                 src: 'https://1lib.tk',
                 alt: 'Z-lib镜像站'
-            },{
-                src: 'https://www.werebook.com',
-                alt: '书堆阅读'
-            },{
-                src: 'https://www.sulery.com',
-                alt: '书乐里'
             }
             
 		]
