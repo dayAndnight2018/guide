@@ -216,6 +216,9 @@ html{
 		justify-content: space-around;
 		align-items: center;
 	}
+    .guideDetail:hover{
+		transform: scale(0.8);
+	}
 	.guideDetailContent{
 		flex: 3;
 		width: 0;
