@@ -217,7 +217,7 @@ html{
 		align-items: center;
 	}
     .guideDetail:hover{
-		transform: scale(0.8);
+		transform: scale(0.95);
 	}
 	.guideDetailContent{
 		flex: 3;
