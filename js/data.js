@@ -354,6 +354,18 @@ let tools = [
             },{
                 src: 'https://easypdf.com/cn/',
                 alt: '在线PDF转换'
+            },{
+                src: 'https://www.zhaozi.cn/s/all/freebusiness/',
+                alt: '在线免费字体'
+            },{
+                src: 'https://transfonter.org/',
+                alt: '字体到css转换'
+            },{
+                src: 'https://docs.avaloniaui.net/',
+                alt: 'Avalonia文档'
+            },{
+                src: 'https://www.sojson.com/',
+                alt: 'JSON在线工具'
             }
 		]
 	}
