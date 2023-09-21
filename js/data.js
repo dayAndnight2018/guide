@@ -369,6 +369,9 @@ let tools = [
             },{
                 src: 'https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml',
                 alt: 'Fluent样式源码'
+            },{
+                src: 'https://www.bear20.com/',
+                alt: '小熊下载站'
             }
 		]
 	}
