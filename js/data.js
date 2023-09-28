@@ -50,10 +50,6 @@ let learning = [
 				src: 'https://space.bilibili.com/14163840/channel/seriesdetail?sid=433088',
 				alt: '黎曼猜想'
 			},
-			{
-				src: 'https://www.bilibili.com/video/BV18L4y1p7n8?spm_id_from=333.337.search-card.all.click',
-				alt: '科目三视频'
-			},
             {
                 src: 'https://hipstersound.com/ambience.html',
                 alt: '白噪声'
@@ -66,9 +62,6 @@ let learning = [
                 src: 'https://www.processon.com',
                 alt: '在线流程图'
             },{
-				src: 'http://everspringlee.gitee.io/online-music',
-				alt: '云音乐'
-			},{
                 src: 'https://books.halfrost.com/leetcode/ChapterTwo/Array',
                 alt: 'Leetcode解析'
             },{
@@ -113,9 +106,6 @@ let learning = [
             },{
                 src: 'https://dayAndnight2018.github.io/career-exam',
                 alt: '事业单位'
-            },{
-                src: 'https://tool.chinaz.com/dns?type=a&host=github.com&ip=',
-                alt: 'dns查询'
             }
             
 		]
@@ -209,9 +199,6 @@ let books = [
             },{
                 src: 'https://oceanofpdf.com',
                 alt: 'PDF海洋'
-            },{
-                src: 'https://1lib.tk',
-                alt: 'Z-lib镜像站'
             }
             
 		]
@@ -381,6 +368,10 @@ let amusement = [
 	{
 		num: 5,
 		data:[
+            {
+				src: 'http://everspringlee.gitee.io/online-music',
+				alt: '云音乐'
+			},
 			{
 				src: 'https://tool.liumingye.cn/music',
 				alt: 'MyFreeMP3'
