@@ -83,9 +83,6 @@ let learning = [
                 src: 'https://doocs.github.io/jvm/00-quickstart.html',
                 alt: 'JVM解析'
             },{
-                src: 'https://javanote.doc.lewky.cn/#/README',
-                alt: 'JAVA Note'
-            },{
                 src: 'http://www.cyc2018.xyz',
                 alt: 'JAVA八股文'
             },{
