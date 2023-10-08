@@ -9,7 +9,7 @@ let guideTabListData = [
         num: 1,
     },
     {
-        title: '在线观影',
+        title: '在线影音',
         num: 2,
     },
     {
@@ -19,10 +19,6 @@ let guideTabListData = [
     {
     	title: '在线工具',
     	num: 4,
-    },
-    {
-        title: '在线娱乐',
-        num: 5,
     }
 ];
 
@@ -115,6 +111,14 @@ let movies = [
 	{
 		num: 2,
 		data:[
+            {
+				src: 'http://everspringlee.gitee.io/online-music',
+				alt: '云音乐'
+			},
+			{
+				src: 'https://tool.liumingye.cn/music',
+				alt: 'MyFreeMP3'
+			},
 			{
 				src: 'https://www.runker.live',
 				alt: '行客影视'
@@ -373,25 +377,8 @@ let tools = [
 	}
 ]
 
-let amusement = [
-	{
-		num: 5,
-		data:[
-            {
-				src: 'http://everspringlee.gitee.io/online-music',
-				alt: '云音乐'
-			},
-			{
-				src: 'https://tool.liumingye.cn/music',
-				alt: 'MyFreeMP3'
-			}			
-		]
-	}
-]
-
 guideTabGroupListData = guideTabGroupListData.concat(program);
 guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
-guideTabGroupListData = guideTabGroupListData.concat(amusement);
