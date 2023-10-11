@@ -372,7 +372,10 @@ let tools = [
             {
                 src: 'https://www.processon.com',
                 alt: '在线流程图'
-            },
+            },{
+                src: 'https://excalidraw.com/',
+                alt: '在线绘图'
+            }
 		]
 	}
 ]
