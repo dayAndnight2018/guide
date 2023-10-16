@@ -44,6 +44,10 @@ let program = [
             {
                 src: 'https://juejin.cn/backend',
                 alt: '掘金'
+            },
+            {
+                src: 'http://doc.redisfans.com/', 
+                alt: 'Redis文档'
             }
             
 		]
