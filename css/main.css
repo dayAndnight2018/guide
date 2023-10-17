@@ -215,6 +215,7 @@ html{
 		flex-direction: row;
 		justify-content: space-around;
 		align-items: center;
+        transition: transform 300ms;
 	}
     .guideDetail:hover{
 		transform: scale(0.95);
