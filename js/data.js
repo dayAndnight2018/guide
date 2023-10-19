@@ -17,7 +17,7 @@ let guideTabListData = [
         num: 3,
     },
     {
-    	title: '在线工具',
+    	title: '开发效能',
     	num: 4,
 	},
 	{
@@ -216,9 +216,57 @@ let books = [
 	}
 ]
 
-let tools = [
+let developTools = [
 	{
 		num: 4,
+		data:[
+			{
+				src: 'https://www.sojson.com',
+				alt: 'Json在线解析'
+			},
+			{
+				src: 'https://mirrors.tuna.tsinghua.edu.cn',
+				alt: '清华镜像'
+			},
+            {
+				src: 'https://mirrors.huaweicloud.com/home',
+				alt: '华为镜像'
+			},
+			{
+                src: 'https://transfonter.org/',
+                alt: '字体到css转换'
+            },{
+                src: 'https://docs.avaloniaui.net/',
+                alt: 'Avalonia文档'
+            },{
+                src: 'https://www.sojson.com/',
+                alt: 'JSON在线工具'
+            },{
+                src: 'https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml',
+                alt: 'Fluent样式源码'
+			},
+			{
+                src: 'https://tool.lu/timestamp',
+                alt: '在线时间戳转换'
+            },
+            {
+                src: 'https://www.processon.com',
+                alt: '在线流程图'
+            },{
+                src: 'https://excalidraw.com/',
+                alt: '在线绘图'
+			},
+			{
+				src: 'https://www.iconfont.cn',
+				alt: '阿里巴巴Icon'
+			}
+		]
+	}
+]
+
+let tools = [
+	{
+		num: 5,
 		data:[
 			{
 				src: 'https://www.toolfk.com',
@@ -227,10 +275,6 @@ let tools = [
 			{
 				src: 'https://cdnjs.com/libraries',
 				alt: '免费cdn'
-			},
-			{
-				src: 'https://www.iconfont.cn',
-				alt: '阿里巴巴Icon'
 			},
 			{
 				src: 'https://www.toolnb.com',
@@ -310,22 +354,11 @@ let tools = [
 				src: 'http://bizhi360.com',
 				alt: '壁纸360'
 			},
-			{
-				src: 'https://www.sojson.com',
-				alt: 'Json在线解析'
-			},
             {
 				src: 'https://xclient.info',
 				alt: '精品Mac应用'
 			},
             {
-				src: 'https://mirrors.tuna.tsinghua.edu.cn',
-				alt: '清华镜像'
-			},
-            {
-				src: 'https://mirrors.huaweicloud.com/home',
-				alt: '华为镜像'
-			},{
 				src: 'https://www.16personalities.com/ch',
 				alt: '十六种人格'
 			},{
@@ -356,33 +389,11 @@ let tools = [
                 src: 'https://www.zhaozi.cn/s/all/freebusiness/',
                 alt: '在线免费字体'
             },{
-                src: 'https://transfonter.org/',
-                alt: '字体到css转换'
-            },{
-                src: 'https://docs.avaloniaui.net/',
-                alt: 'Avalonia文档'
-            },{
-                src: 'https://www.sojson.com/',
-                alt: 'JSON在线工具'
-            },{
-                src: 'https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml',
-                alt: 'Fluent样式源码'
-            },{
                 src: 'https://www.bear20.com/',
                 alt: '小熊下载站'
             },{
                 src: 'https://hipstersound.com/ambience.html',
                 alt: '白噪声'
-            },{
-                src: 'https://tool.lu/timestamp',
-                alt: '在线时间戳转换'
-            },
-            {
-                src: 'https://www.processon.com',
-                alt: '在线流程图'
-            },{
-                src: 'https://excalidraw.com/',
-                alt: '在线绘图'
             }
 		]
 	}
@@ -392,4 +403,5 @@ guideTabGroupListData = guideTabGroupListData.concat(program);
 guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
+guideTabGroupListData = guideTabGroupListData.concat(developTools);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
