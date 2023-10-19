@@ -3,7 +3,7 @@ let guideTabListData = [
     {
         title: '编程',
         num: 0,
-    },
+	},
     {
         title: '进阶',
         num: 1,
@@ -19,7 +19,11 @@ let guideTabListData = [
     {
     	title: '在线工具',
     	num: 4,
-    }
+	},
+	{
+		title: '日常工具',
+    	num: 5,
+	}
 ];
 
 
