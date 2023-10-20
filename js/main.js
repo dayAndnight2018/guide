@@ -111,11 +111,12 @@ $(document).ready(function(){
 		// document.getElementById(actualText).scrollIntoView();
 
 		vue.$nextTick(() => {
-			var cur = document.getElementById(actualText);
-      		cur.scrollIntoView();
+			var target = document.getElementById(actualText);
+			console.log(target);
+			$(target).animate({"scrollTop": target.offsetTop }, 'normal');
       		
-      		$(cur).addClass('shadow-pulse');
-			$(cur).on('animationend', function(){    
+      		$(target).addClass('shadow-pulse');
+			$(target).on('scrollTopEnd', function(){    
 				$(cur).removeClass('shadow-pulse');
 			});
     	});	
