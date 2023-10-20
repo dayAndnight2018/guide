@@ -21,8 +21,12 @@ let guideTabListData = [
     	num: 4,
 	},
 	{
-		title: '日常工具',
+		title: '壁纸',
     	num: 5,
+	},
+	{
+		title: '在线工具',
+    	num: 6,
 	}
 ];
 
@@ -235,13 +239,16 @@ let developTools = [
 			{
                 src: 'https://transfonter.org/',
                 alt: '字体到css转换'
-            },{
+			},
+			{
                 src: 'https://docs.avaloniaui.net/',
                 alt: 'Avalonia文档'
-            },{
+			},
+			{
                 src: 'https://www.sojson.com/',
                 alt: 'JSON在线工具'
-            },{
+			},
+			{
                 src: 'https://github.com/AvaloniaUI/Avalonia/blob/master/src/Avalonia.Themes.Fluent/Controls/Button.xaml',
                 alt: 'Fluent样式源码'
 			},
@@ -252,22 +259,15 @@ let developTools = [
             {
                 src: 'https://www.processon.com',
                 alt: '在线流程图'
-            },{
+			},
+			{
                 src: 'https://excalidraw.com/',
                 alt: '在线绘图'
 			},
 			{
 				src: 'https://www.iconfont.cn',
 				alt: '阿里巴巴Icon'
-			}
-		]
-	}
-]
-
-let tools = [
-	{
-		num: 5,
-		data:[
+			},
 			{
 				src: 'https://www.toolfk.com',
 				alt: 'tooLFK'
@@ -281,9 +281,33 @@ let tools = [
 				alt: '爱资料在线工具'
 			},
 			{
-				src: 'https://onlineconvertfree.com',
-				alt: '在线格式转换'
+                src: 'https://imgse.com',
+                alt: '路过图床'
 			},
+			{
+                src: 'https://www.diffchecker.com/text-compare',
+                alt: '在线diff'
+			},
+			{
+                src: 'https://www.jq22.com',
+                alt: 'Jquery效果' 
+			},
+			{
+                src: 'https://api.f4team.cn/',
+                alt: '独角兽API'
+			},
+			{
+				src: 'http://tooool.org',
+				alt: '程序员导航'
+			}
+		]
+	}
+]
+
+let pictures = [
+	{
+		num: 5,
+		data:[
 			{
 				src: 'https://wallhaven.cc/toplist',
 				alt: 'wallhaven'
@@ -305,10 +329,6 @@ let tools = [
 				alt: '魔镜街拍'
 			},
 			{
-				src: 'https://www.yasuotu.com/jiazi',
-				alt: '在线图片编辑'
-			},
-			{
 				src: 'https://bz.zzzmh.cn/index',
 				alt: '极简壁纸'
 			},
@@ -317,30 +337,8 @@ let tools = [
 				alt: '元气壁纸'
 			},
 			{
-				src: 'http://tooool.org',
-				alt: '程序员导航'
-			},
-			{
-				num: 19,
-				img: 'img/default.png',
-				src: 'https://www.matheditor.cn/#fractions-and-binomials',
-				alt: '在线公式编辑'
-			},
-			{
-				src: 'https://www.omegaxyz.com/mypage/wallpaper',
-				alt: 'wallpaper'
-			},
-			{
 				src: 'https://mm.enterdesk.com/bizhi/64629.html',
 				alt: '回车桌面'
-			},
-			{
-				src: 'http://suxieban.com',
-				alt: '在线画板'
-			},
-			{
-				src: 'https://www.lanzoui.com',
-				alt: '蓝奏云'
 			},
 			{
 				src: 'https://www.4kbizhi.com',
@@ -354,6 +352,38 @@ let tools = [
 				src: 'http://bizhi360.com',
 				alt: '壁纸360'
 			},
+			{
+				src: 'https://www.omegaxyz.com/mypage/wallpaper',
+				alt: 'wallpaper'
+			}
+		]
+	}
+]
+
+let tools = [
+	{
+		num: 6,
+		data:[
+			{
+				src: 'https://onlineconvertfree.com',
+				alt: '在线格式转换'
+			},
+			{
+				src: 'https://www.yasuotu.com/jiazi',
+				alt: '在线图片编辑'
+			},
+			{
+				src: 'https://www.matheditor.cn/#fractions-and-binomials',
+				alt: '在线公式编辑'
+			},
+			{
+				src: 'http://suxieban.com',
+				alt: '在线画板'
+			},
+			{
+				src: 'https://www.lanzoui.com',
+				alt: '蓝奏云'
+			},
             {
 				src: 'https://xclient.info',
 				alt: '精品Mac应用'
@@ -365,20 +395,8 @@ let tools = [
                 src: 'https://studio.metamaker.cn/#/cover',
                 alt: '企业卡通形象'
             },{
-                src: 'https://imgse.com',
-                alt: '路过图床'
-            },{
                 src: 'https://tools.sixyin.com',
                 alt: '六音工具箱'
-            },{
-                src: 'https://www.jq22.com',
-                alt: 'Jquery效果' 
-            },{
-                src: 'https://www.diffchecker.com/text-compare',
-                alt: '在线diff'
-            },{
-                src: 'https://api.f4team.cn/',
-                alt: '独角兽API'
             },{
                 src: 'https://www.photopea.com/',
                 alt: '在线PS'
@@ -404,4 +422,5 @@ guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
 guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(developTools);
+guideTabGroupListData = guideTabGroupListData.concat(pictures);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
