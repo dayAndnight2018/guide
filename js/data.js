@@ -56,6 +56,10 @@ let program = [
             {
                 src: 'http://doc.redisfans.com/', 
                 alt: 'Redis文档'
+            },
+            {
+                src: 'https://yiyan.baidu.com/',
+                alt: '文心一言'
             }
             
 		]
