@@ -307,7 +307,11 @@ let developTools = [
 			{
 				src: 'https://www.pppet.net/',
 				alt: 'cron表达式解析'
-			}
+			},
+            {
+                src: 'https://www.lddgo.net/string/line-reduce#toolNoteIframe',
+                alt: 'sql合并到一行'
+            }
 		]
 	}
 ]
