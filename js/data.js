@@ -311,6 +311,10 @@ let developTools = [
             {
                 src: 'https://www.lddgo.net/string/line-reduce#toolNoteIframe',
                 alt: 'sql合并到一行'
+            },
+            {
+                src: 'https://www.html5tricks.com/',
+                alt: 'html5tricks'
             }
 		]
 	}
