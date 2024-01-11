@@ -27,7 +27,10 @@ let guideTabListData = [
 	{
 		title: '在线工具',
     	num: 6,
-	}
+	},{
+        title: 'Windows应用',
+        num: 7
+    }
 ];
 
 
@@ -433,6 +436,18 @@ let tools = [
 	}
 ]
 
+let win_soft = [
+	{
+		num: 7,
+		data:[
+			{
+				src: 'https://www.foxitsoftware.cn/pdf-reader/',
+				alt: '福昕PDF阅读器'
+			}
+		]
+	}
+]
+
 guideTabGroupListData = guideTabGroupListData.concat(program);
 guideTabGroupListData = guideTabGroupListData.concat(learning);
 guideTabGroupListData = guideTabGroupListData.concat(movies);
@@ -440,3 +455,4 @@ guideTabGroupListData = guideTabGroupListData.concat(books);
 guideTabGroupListData = guideTabGroupListData.concat(developTools);
 guideTabGroupListData = guideTabGroupListData.concat(pictures);
 guideTabGroupListData = guideTabGroupListData.concat(tools);
+guideTabGroupListData = guideTabGroupListData.concat(win_soft);
