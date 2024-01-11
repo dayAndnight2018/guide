@@ -198,7 +198,7 @@ html{
 		overflow: hidden;
 	    width: 100%;
 	    margin: 0px auto;
-        font-size: 0.5rem;
+        font-size: 0.8rem;
 	}
 }
 
@@ -342,7 +342,7 @@ html{
 	word-break:keep-all;
 	white-space:nowrap;
 	text-overflow:ellipsis;
-    font-size: 0.5rem;
+    font-size: 0.8rem;
 }
 
 /*.guideDetailContent{
