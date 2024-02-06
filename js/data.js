@@ -443,16 +443,13 @@ let win_soft = [
 			{
 				src: 'https://www.foxitsoftware.cn/pdf-reader/',
 				alt: '福昕PDF阅读器'
-			}
+			},
+            {
+                src: "https://dev.mysql.com/downloads/workbench/",
+                alt: "mysql workbench"
+            }
 		]
 	}
 ]
 
-guideTabGroupListData = guideTabGroupListData.concat(program);
-guideTabGroupListData = guideTabGroupListData.concat(learning);
-guideTabGroupListData = guideTabGroupListData.concat(movies);
-guideTabGroupListData = guideTabGroupListData.concat(books);
-guideTabGroupListData = guideTabGroupListData.concat(developTools);
-guideTabGroupListData = guideTabGroupListData.concat(pictures);
-guideTabGroupListData = guideTabGroupListData.concat(tools);
-guideTabGroupListData = guideTabGroupListData.concat(win_soft);
+guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft);
