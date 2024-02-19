@@ -300,10 +300,6 @@ let developTools = [
                 alt: 'Jquery效果' 
 			},
 			{
-                src: 'https://api.f4team.cn/',
-                alt: '独角兽API'
-			},
-			{
 				src: 'http://tooool.org',
 				alt: '程序员导航'
 			},
