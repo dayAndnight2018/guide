@@ -229,7 +229,11 @@ let books = [
             },{
                 src: 'https://oceanofpdf.com',
                 alt: 'PDF海洋'
+            },{
+                src: 'https://www.manongbook.com/',
+                alt: '码农书籍'
             }
+
             
 		]
 	}
