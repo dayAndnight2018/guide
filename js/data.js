@@ -48,6 +48,14 @@ let program = [
 				src: 'https://www.cnblogs.com',
 				alt: 'cnblogs'
 			},
+            {
+                src: 'https://gitee.com/',
+                alt: 'Gitee'
+            },
+            {
+                src: 'https://github.com/',
+                alt: 'Github'
+            },
 			{
 				src: 'https://mvnrepository.com',
 				alt: 'maven库'
