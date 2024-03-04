@@ -103,6 +103,9 @@ html{
 .guideTabItem{
 	margin: 2px 5px;
 	padding: 1rem;
+    border-radius: 10px;
+    white-space: pre-line;
+    font-size: 0.8rem;
 }
 
 .guideTabItem:hover{
