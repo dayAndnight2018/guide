@@ -321,6 +321,10 @@ let developTools = [
             {
                 src: 'https://www.html5tricks.com/',
                 alt: 'html5tricks'
+            },
+            {
+                src: 'https://paper.z2h.cn/zitie/han/article',
+                alt: '在线生成字帖'
             }
 		]
 	}
