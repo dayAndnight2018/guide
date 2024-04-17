@@ -128,8 +128,10 @@ let learning = [
             },{
                 src: 'https://dayAndnight2018.github.io/career-exam',
                 alt: '事业单位'
+            },{
+                src: "https://gitcode.com/jaywcjlove/reference/overview",
+                alt: "开发菜谱儿"
             }
-            
 		]
 	}
 ]
