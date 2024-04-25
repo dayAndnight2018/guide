@@ -327,6 +327,10 @@ let developTools = [
             {
                 src: 'https://paper.z2h.cn/zitie/han/article',
                 alt: '在线生成字帖'
+            },
+            {
+                src: 'https://everspringlee.gitee.io/tools/sql.html',
+                alt: 'Sql建表语句生成'
             }
 		]
 	}
