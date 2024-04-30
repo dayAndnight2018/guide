@@ -86,6 +86,7 @@ html{
 	justify-content: flex-start;
 
 	overflow-y: scroll;
+    border-radius: 5px 0 0 5px;
 }
 
 .guideTab::-webkit-scrollbar{
@@ -194,6 +195,7 @@ html{
         grid-row-gap: 20px;
         justify-content: center;
         overflow-y: scroll;
+        border-radius: 5px;
 	}
 	.guideDetailAltWrapper{
 		color: var(--basic-ff-color);
@@ -246,6 +248,7 @@ html{
 		justify-content: center;
 
 		overflow-y: scroll;
+        border-radius: 5px;
 	}
 	.guideDetailAltWrapper{
 		color: var(--basic-ff-color);
@@ -302,6 +305,7 @@ html{
 		justify-content: center;
 
 		overflow-y: scroll;
+        border-radius: 5px;
 	}
 	.guideDetailAltWrapper{
 		color: var(--basic-ff-color);
