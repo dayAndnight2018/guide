@@ -141,7 +141,7 @@ let movies = [
 		num: 2,
 		data:[
             {
-				src: 'http://everspringlee.gitee.io/online-music',
+				src: 'https://dayandnight2018.github.io/online-music/',
 				alt: '云音乐'
 			},
 			{
