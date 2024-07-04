@@ -17,19 +17,24 @@ let guideTabListData = [
         num: 3,
     },
     {
-    	title: '开发效能',
-    	num: 4,
-	},
-	{
-		title: '壁纸',
-    	num: 5,
-	},
-	{
-		title: '在线工具',
-    	num: 6,
-	},{
+	title: '开发效能',
+	num: 4,
+    },
+    {
+	title: '壁纸',
+	num: 5,
+    },
+    {
+	title: '在线工具',
+	num: 6,
+    },
+    {
         title: 'Windows应用',
         num: 7
+    },
+     {
+        title: 'Mac应用',
+        num: 8
     }
 ];
 
@@ -420,11 +425,8 @@ let tools = [
 				src: 'https://www.lanzoui.com',
 				alt: '蓝奏云'
 			},
-            {
-				src: 'https://xclient.info',
-				alt: '精品Mac应用'
-			},
-            {
+           
+                        {
 				src: 'https://www.16personalities.com/ch',
 				alt: '十六种人格'
 			},{
@@ -469,4 +471,46 @@ let win_soft = [
 	}
 ]
 
-guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft);
+let mac_soft = [
+	{
+		num: 8,
+		data:[
+			 {
+				src: 'https://xclient.info',
+				alt: '精品Mac应用'
+			},
+           		{
+				src: 'https://www.inpandora.com/code',
+				alt: '潘多拉盒子'
+			},
+			{
+				src: 'https://maczz.net',
+				alt: 'MacZZ'
+			},
+			{
+				src: 'https://www.macbl.com',
+				alt: '马可菠萝'
+			},
+			{
+				src: 'https://macwk.cn',
+				alt: 'MacWk'
+			},
+			{
+				src: 'https://www.digit77.com',
+				alt: 'digit77'
+			},
+			{
+				src: 'https://www.xmac.im',
+				alt: 'xMac'
+			},
+			{
+				src: 'https://appstorrent.ru',
+				alt: 'appStorrent'
+			}
+			
+			
+		]
+	}
+]
+
+guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft, mac_soft);
