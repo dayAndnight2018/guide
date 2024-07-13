@@ -226,7 +226,7 @@ let books = [
 				src: 'https://ifeve.com',
 				alt: '并发编程网'			
 			},{
-                src: 'https://www.book123.info',
+                src: 'https://www.book345.com',
                 alt: '无名图书'
             },{
                 src: 'https://foxgreat.com',
