@@ -340,7 +340,10 @@ let developTools = [
             {
                 src: 'https://everspringlee.gitee.io/tools/sql.html',
                 alt: 'Sql建表语句生成'
-            }
+            },{
+                src: 'https://www.iodraw.com/gantt',
+                alt: '在线甘特图'
+            }	
 		]
 	}
 ]
