@@ -170,8 +170,12 @@ let movies = [
 				alt: '铁人影院'
 			},
 			{
-				src: 'https://www.bingdou.wang/live',
+				src: 'http://www.bingdou.live',
 				alt: '冰豆直播'
+			},
+			{
+				src: 'http://www.bingdou.wang/movie',
+				alt: '冰豆影视'
 			}
 	
 		]
@@ -448,9 +452,6 @@ let tools = [
                 src: 'https://www.zhaozi.cn/s/all/freebusiness/',
                 alt: '在线免费字体'
             },{
-                src: 'https://www.bear20.com/',
-                alt: '小熊下载站'
-            },{
                 src: 'https://hipstersound.com/ambience.html',
                 alt: '白噪声'
             }
@@ -462,6 +463,10 @@ let win_soft = [
 	{
 		num: 7,
 		data:[
+			{
+		                src: 'https://www.bear20.com/',
+		                alt: '小熊下载站'
+		         },
 			{
 				src: 'https://www.foxitsoftware.cn/pdf-reader/',
 				alt: '福昕PDF阅读器'
