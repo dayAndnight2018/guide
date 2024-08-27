@@ -471,10 +471,18 @@ let win_soft = [
 				src: 'https://www.foxitsoftware.cn/pdf-reader/',
 				alt: '福昕PDF阅读器'
 			},
-            {
-                src: "https://dev.mysql.com/downloads/workbench/",
-                alt: "mysql workbench"
-            }
+		            {
+		                src: "https://dev.mysql.com/downloads/workbench/",
+		                alt: "mysql workbench"
+		            },
+			{
+				src: "https://registry.npmmirror.com/binary.html?path=git-for-windows",
+				alt: "Git安装包镜像"
+			},
+			{
+				src: "https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html",
+				alt: "JDK8"
+			}
 		]
 	}
 ]
