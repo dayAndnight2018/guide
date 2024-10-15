@@ -92,20 +92,8 @@ let learning = [{
 			src: 'https://books.halfrost.com/leetcode/ChapterTwo/Array',
 			alt: 'Leetcode解析'
 		}, {
-			src: 'https://doocs.gitee.io/source-code-hunter',
-			alt: '源码系列'
-		}, {
-			src: 'https://doocs.gitee.io/leetcode',
-			alt: '算法题系列'
-		}, {
 			src: 'https://hellokoding.com',
 			alt: 'HelloKoding'
-		}, {
-			src: 'https://doocs.gitee.io/advanced-java',
-			alt: '面试扫盲'
-		}, {
-			src: 'https://labuladong.gitee.io/algo',
-			alt: 'labuladong刷题'
 		}, {
 			src: 'https://doocs.github.io/jvm/00-quickstart.html',
 			alt: 'JVM解析'
@@ -192,10 +180,6 @@ let books = [{
 		{
 			src: 'https://www.bookstack.cn',
 			alt: '书栈网'
-		},
-		{
-			src: 'https://libgen.unblockit.blue',
-			alt: 'libgen'
 		},
 		{
 			src: 'https://downloadpdf.cn/index.html',
@@ -310,10 +294,6 @@ let developTools = [{
 			alt: 'Jquery效果'
 		},
 		{
-			src: 'http://tooool.org',
-			alt: '程序员导航'
-		},
-		{
 			src: 'https://www.pppet.net/',
 			alt: 'cron表达式解析'
 		},
@@ -325,14 +305,7 @@ let developTools = [{
 			src: 'https://www.html5tricks.com/',
 			alt: 'html5tricks'
 		},
-		{
-			src: 'https://paper.z2h.cn/zitie/han/article',
-			alt: '在线生成字帖'
-		},
-		{
-			src: 'https://everspringlee.gitee.io/tools/sql.html',
-			alt: 'Sql建表语句生成'
-		}, {
+		 {
 			src: 'https://www.iodraw.com/gantt',
 			alt: '在线甘特图'
 		}
@@ -341,14 +314,7 @@ let developTools = [{
 
 let pictures = [{
 	num: 5,
-	data: [{
-			src: 'https://wallhaven.cc/toplist',
-			alt: 'wallhaven'
-		},
-		{
-			src: 'https://www.umeitu.com',
-			alt: '优美图库'
-		},
+	data: [	
 		{
 			src: 'https://www.yalayi.com',
 			alt: '雅拉依'
@@ -403,7 +369,7 @@ let tools = [{
 			alt: '在线图片编辑'
 		},
 		{
-			src: 'https://www.matheditor.cn/#fractions-and-binomials',
+			src: 'http://lovert.net/##',
 			alt: '在线公式编辑'
 		},
 		{
