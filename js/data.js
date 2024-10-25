@@ -133,7 +133,7 @@ let movies = [{
 			alt: 'MyFreeMP3'
 		},
 		{
-			src: 'https://55app.shop/?ref=www.9eip.com',
+			src: 'https://wuwuwutv.com/',
 			alt: '555影视'
 		},
 		{
