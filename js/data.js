@@ -34,6 +34,10 @@ let guideTabListData = [{
 	{
 		title: 'Mac应用',
 		num: 8
+	},
+	{
+		title: '时事新闻',
+		num: 9
 	}
 ];
 
@@ -155,7 +159,26 @@ let movies = [{
 		{
 			src: 'http://www.bingdou.wang/movie',
 			alt: '冰豆影视'
+		},
+		{
+			src: "http://xiepp.com/movie/list",
+			alt: "80电影网"
+		},
+		{
+			src: "https://www.88mv.org/",
+			alt: "88影视网"
+		},
+		{
+			src: "https://www.languang.pro/",
+			alt: "蓝光影院"
+		},
+		{
+			src: "https://www.yangshipin.cn/resource/pool",
+			alt: "央视频"
 		}
+
+		
+		
 
 	]
 }]
@@ -259,9 +282,31 @@ let developTools = [{
 			alt: '在线流程图'
 		},
 		{
+			src: 'https://www.iodraw.com/gantt',
+			alt: '在线甘特图'
+		},
+		{
 			src: 'https://excalidraw.com/',
 			alt: '在线绘图'
 		},
+		{
+			src: 'https://www.jyshare.com/more/kitymind/index.html',
+			alt: '在线思维导图1'
+		},
+		{
+			src: 'https://www.jyshare.com/more/mind-map/index.html#/',
+			alt: '在线思维导图2'
+		},
+		{
+			src: 'https://www.mindline.cn/webapp',
+			alt: '在线思维导图3'
+		},
+		{
+			src: 'https://app.diagrams.net/',
+			alt: 'drawIO'
+		},
+		
+		
 		{
 			src: 'https://www.iconfont.cn',
 			alt: '阿里巴巴Icon'
@@ -281,6 +326,30 @@ let developTools = [{
 		{
 			src: 'https://imgse.com',
 			alt: '路过图床'
+		},
+		{
+			src: 'https://pic.codess.cc/',
+			alt: '书生图床'
+		},
+		{
+			src: 'https://postimages.org/',
+			alt: 'postimages图床'
+		},
+		{
+			src: 'https://imgbox.com/',
+			alt: 'imgbox图床'
+		},
+		{
+			src: 'https://www.imagehub.cc/',
+			alt: 'imagehub'
+		},
+		{
+			src: 'https://img.tg/',
+			alt: 'img图床'
+		},
+		{
+			src: 'https://www.imgurl.org/',
+			alt: 'imgurl图床'
 		},
 		{
 			src: 'https://www.diffchecker.com/text-compare',
@@ -467,4 +536,87 @@ let mac_soft = [{
 	]
 }]
 
-guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft, mac_soft);
+let news = [{
+	num: 9,
+	data: [{
+			src: 'https://tougao.12371.cn/wenhui.php',
+			alt: '先锋文汇'
+		},
+		{
+			src: 'http://www.news.cn/politics/xxjxs/index.htm',
+			alt: '学习进行时-新华网'
+		},
+		{
+			src: 'http://cpc.people.com.cn/',
+			alt: '人民网'
+		},
+		{
+			src: 'http://www.xinhuanet.com/comments/index.html',
+			alt: '新华网评'
+		},
+		{
+			src: 'http://opinion.people.com.cn/',
+			alt: '观点-人民网'
+		},
+		{
+			src: 'http://paper.people.com.cn/rmrb/html/2024-06/02/nbs.D110000renmrb_01.htm',
+			alt: '人民日报'
+		},
+		{
+			src: 'http://www.qstheory.cn/',
+			alt: '求是网'
+		},
+		{
+			src: 'https://www.gkzenti.cn/',
+			alt: '题库'
+		},
+		{
+			src: 'https://wanxuege.com/forum-84-1.html',
+			alt: '万学阁'
+		},
+		{
+			src: 'https://www.fenbi.com/spa/tiku/guide/catalog/xingce?prefix=xingce',
+			alt: '粉笔'
+		},
+		{
+			src: 'https://www.kdocs.cn/l/ctYoDB9lU4o9',
+			alt: '学习目录'
+		},
+		{
+			src: 'https://www.wolai.com/shangan/eTk9MfMbm1AtJUa4SrwREC',
+			alt: '沉思录'
+		},
+		{
+			src: 'https://www.kdocs.cn/l/cdgatQ7bYlp4?openfrom=docs',
+			alt: '汇总'
+		},
+		{
+			src: 'https://px43sfnrcga.feishu.cn/wiki/Fv95wcFALio3aVkEvmScsik3nSd',
+			alt: '资源目录'
+		},
+		{
+			src: 'https://www.wolai.com/shangan/jejhnq1rDBh7bPUmrEKrCz',
+			alt: '基期'
+		},
+		{
+			src: 'https://plan.zygwy.cn/admin',
+			alt: '竹叶'
+		},
+		{
+			src: 'http://gongkao66688.edudisk.cn/webfile.aspx',
+			alt: '教程'
+		},
+		{
+			src: 'http://gongkao66688.edudisk.cn/ContentPane.aspx?Path=%2f2025%c4%ea%b9%fa%bf%bc%a1%fb+%a1%fb+%b5%e3%bb%f7%bd%f8%c8%eb/',
+			alt: '资料盘1'
+		},
+		{
+			src: 'http://gongkao66688.edudisk.cn/ContentPane.aspx?Path=%2f2025%c4%ea%ca%a1%bf%bc%a1%fb+%a1%fb+%b5%e3%bb%f7%bd%f8%c8%eb/',
+			alt: '资料盘2'
+		}
+		
+		
+	]
+}]
+
+guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft, mac_soft, news);
