@@ -137,6 +137,10 @@ let movies = [{
 			alt: 'MyFreeMP3'
 		},
 		{
+			src: "http://www.htqyy.com/",
+			alt: "轻音乐"
+		},
+		{
 			src: 'https://wuwuwutv.com/',
 			alt: '555影视'
 		},
@@ -468,6 +472,9 @@ let tools = [{
 		}, {
 			src: 'https://hipstersound.com/ambience.html',
 			alt: '白噪声'
+		},{
+			src: 'https://www.tutjiexi.com/',
+			alt: "去水印"
 		}
 	]
 }]
