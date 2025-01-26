@@ -179,6 +179,42 @@ let movies = [{
 		{
 			src: "https://www.yangshipin.cn/resource/pool",
 			alt: "央视频"
+		},
+		{
+			src: "https://www.qiuxia678.com/",
+			alt: "看看屋"
+		},
+		{
+			src: "https://www.xyys.uk/",
+			alt: "星云影视"
+		},
+		{
+			src: "https://libvio.art/",
+			alt: "libvio"
+		},
+		{
+			src: "https://www.jscrzn.com/",
+			alt: "火机影视"
+		},
+		{
+			src: "https://www.jqqzx.me/type/juji.html",
+			alt: "jqqzx"
+		},
+		{
+			src: "https://www.sunnafh.com/",
+			alt: "新视讯"
+		},
+		{
+			src : "https://www.haitu.xyz/",
+			alt: "海兔影视"
+		},
+		{
+			src: "https://www.dsx888.com/",
+			alt : "大师兄影视"
+		},
+		{
+			src: "https://tv.cctv.com/",
+			alt: "CCTV"
 		}
 
 		
