@@ -77,6 +77,10 @@ let program = [{
 		{
 			src: 'https://yiyan.baidu.com/',
 			alt: '文心一言'
+		},
+		{
+			src: 'https://chat.deepseek.com/',
+			alt: 'DeepSeek'
 		}
 
 	]
