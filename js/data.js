@@ -283,6 +283,9 @@ let books = [{
 		}, {
 			src: 'https://oceanofpdf.com',
 			alt: 'PDF海洋'
+		},{
+			src: "https://zh.kid1412.icu/",
+			alt: "Zlibrary"
 		}
 	]
 }]
