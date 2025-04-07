@@ -145,7 +145,7 @@ let movies = [{
 			alt: "轻音乐"
 		},
 		{
-			src: 'https://wuwuwutv.com/',
+			src: 'https://55me7.art/',
 			alt: '555影视'
 		},
 		{
