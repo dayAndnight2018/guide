@@ -348,6 +348,10 @@ let developTools = [{
 			src: 'https://www.mindline.cn/webapp',
 			alt: '在线思维导图3'
 		},
+		   {
+			   src: "https://drawnix.com/",
+			   alt: "在线绘图"
+		   },
 		{
 			src: 'https://app.diagrams.net/',
 			alt: 'drawIO'
