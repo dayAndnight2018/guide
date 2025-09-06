@@ -580,6 +580,10 @@ let mac_soft = [{
 		{
 			src: 'https://appstorrent.ru',
 			alt: 'appStorrent'
+		},
+		{
+			src: 'https://www.nbdm.net/mac.html',
+			alt: '软件下载'
 		}
 
 
