@@ -72,11 +72,9 @@ function set16ToRgb(str){
 $(document).ready(function(){
 
 	$(".guideTabItem").click(function(){
-		$(this).addClass("activeGuideTabItem");
-		$(this).find("a").addClass("activeGuideTabItemLink");
-
-		$(this).siblings(".guideTabItem").removeClass("activeGuideTabItem");
-		$(this).siblings(".guideTabItem").find("a").removeClass("activeGuideTabItemLink");
+		$(this).addClass("active");
+		
+		$(this).siblings(".guideTabItem").removeClass("active");
 	})
 
 	$(".guideTabItem")[0].click();

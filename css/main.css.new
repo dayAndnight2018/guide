@@ -1,0 +1,358 @@
+/* 重置和基础样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --basic-bg-color: #e7dac4;
+    --basic-fg-color: #FFFFFF;
+    --basic-ff-color: #FA8C35;
+    --basic-text-color: #333333;
+    --hover-bg-color: #f5f0e6;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+    --transition-speed: 300ms;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: var(--basic-text-color);
+}
+
+body {
+    background: var(--basic-bg-color);
+    overflow: hidden;
+}
+
+/* 辅助类 */
+.fiveHMargin {
+    margin: 0 5px;
+}
+
+.fivePrecentMarginTop {
+    margin-top: 5% !important;
+}
+
+.fullWidth {
+    width: 100%;
+}
+
+.halfWidth {
+    width: 50%;
+}
+
+.fullHeight {
+    height: 100%;
+}
+
+.centerContent {
+    text-align: center;
+}
+
+.centerParent {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 90%;
+    transform: translate(-50%, -50%);
+}
+
+/* 标题和按钮样式 */
+.title {
+    color: var(--basic-ff-color);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#confirmButton {
+    color: var(--basic-ff-color);
+    background: transparent;
+    border: 2px solid var(--basic-ff-color);
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all var(--transition-speed) ease;
+    text-decoration: none;
+    display: inline-block;
+}
+
+#confirmButton:hover {
+    color: white;
+    background: var(--basic-ff-color);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px var(--shadow-color);
+}
+
+/* 主布局 */
+.addressList {
+    margin: 0 auto;
+    display: flex;
+    height: 70%;
+    overflow: auto;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 0;
+}
+
+/* 导航标签样式 */
+.guideTab {
+    padding: 5px;
+    background: var(--basic-ff-color);
+    height: 100%;
+    width: 12%;
+    min-width: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto;
+    border-radius: 10px 0 0 10px;
+    box-shadow: 2px 0 10px var(--shadow-color);
+    transition: width var(--transition-speed) ease;
+}
+
+.guideTab::-webkit-scrollbar {
+    width: 4px;
+}
+
+.guideTab::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 2px;
+}
+
+.guideTab::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+}
+
+.guideTab::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.8);
+}
+
+/* 导航项样式 */
+.guideTabItem {
+    margin: 4px 6px;
+    padding: 8px 12px;
+    border-radius: 12px;
+    white-space: pre-line;
+    font-size: 0.85rem;
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+    text-align: center;
+}
+
+.guideTabItem a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    transition: all var(--transition-speed) ease;
+}
+
+.guideTabItem:hover {
+    background: var(--basic-bg-color);
+    transform: translateX(4px);
+}
+
+.guideTabItem:hover a {
+    color: var(--basic-ff-color);
+    font-weight: 600;
+}
+
+/* 激活状态样式 */
+.activeGuideTabItem {
+    background: var(--basic-bg-color);
+    box-shadow: inset 0 0 0 2px var(--basic-ff-color);
+}
+
+.activeGuideTabItemLink {
+    color: var(--basic-ff-color) !important;
+    font-weight: 600;
+}
+
+/* 指南详情列表样式 */
+.guideDetailList {
+    width: 88%;
+    padding: 20px;
+    background: var(--basic-fg-color);
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    justify-content: center;
+    overflow-y: auto;
+    border-radius: 0 10px 10px 0;
+    box-shadow: 2px 0 10px var(--shadow-color);
+}
+
+.guideDetailList::-webkit-scrollbar {
+    width: 8px;
+}
+
+.guideDetailList::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.guideDetailList::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.guideDetailList::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* 指南详情项基础样式 */
+.guideDetail {
+    width: 100%;
+    min-height: 90px;
+    margin: 0;
+    padding: 12px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 8px var(--shadow-color);
+    transition: all var(--transition-speed) ease;
+    cursor: pointer;
+}
+
+.guideDetail:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.guideDetailImg {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 8px;
+    object-fit: contain;
+    border: 2px solid var(--basic-ff-color);
+    transition: all var(--transition-speed) ease;
+}
+
+.guideDetail:hover .guideDetailImg {
+    transform: scale(1.1);
+    border-color: #ff7000;
+}
+
+.guideDetailContent {
+    width: 100%;
+    padding: 0 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.guideDetailLink {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-weight: 600;
+    color: var(--basic-text-color);
+    text-decoration: none;
+    margin-bottom: 4px;
+    transition: color var(--transition-speed) ease;
+}
+
+.guideDetail:hover .guideDetailLink {
+    color: var(--basic-ff-color);
+}
+
+.guideDetailAltWrapper {
+    color: var(--basic-ff-color);
+    display: inline-block;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.guideDatilAlt {
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    word-break: keep-all;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* 响应式设计 */
+@media only screen and (max-width: 768px) {
+    .addressList {
+        flex-direction: column;
+    }
+    
+    .guideTab {
+        width: 100%;
+        height: 150px;
+        border-radius: 10px 10px 0 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        flex-direction: row;
+    }
+    
+    .guideTabItem {
+        min-width: 100px;
+        margin: 6px 4px;
+    }
+    
+    .guideDetailList {
+        width: 100%;
+        border-radius: 0 0 10px 10px;
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .guideDetail {
+        min-height: 80px;
+        padding: 8px;
+    }
+    
+    .guideDetailImg {
+        width: 40px;
+        height: 40px;
+        margin: 6px;
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .guideTab {
+        width: 15%;
+    }
+    
+    .guideDetailList {
+        width: 85%;
+        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    }
+}
+
+/* 动画效果 */
+@keyframes shadowPulse {
+    0%, 100% {
+        box-shadow: 0 2px 8px var(--shadow-color);
+    }
+    50% {
+        box-shadow: 0 4px 16px rgba(250, 140, 53, 0.3);
+    }
+}
+
+.shadow-pulse {
+    animation: shadowPulse 2s ease-in-out infinite;
+}

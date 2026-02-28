@@ -16,44 +16,39 @@
     </head>
 
     <body>
-        <div id="app" class="container has-text-centered fullHeight">
-            <div class="columns has-text-centered fivePrecentMarginTop fullHeight">
-                <main class="column is-12 fullHeight">
-                <h1 class="title is-1 has-text-centered">Guide</h1>
-                
-                <div class="columns is-centered has-text-centered is-mobile">
-                    <div class="column is-6-desktop is-7-mobile is-7-tablet has-text-centered">
-                        <input id="searchBox" class="input is-medium" placeholder="Search From Here"/>
-                    </div>
-                    <div class="column is-2-desktop is-3-mobile is-3-tablet">
-                        <button id="confirmButton" class="button is-medium">Search</button>
-                    </div>
-                </div>
-
-                <div class="addressList columns is-10-desktop is-11-mobile is-10-tablet fullHeight">
-                    <ul class="guideTab column is-1-desktop is-3-mobile is-1-tablet">
-                        <li v-for="ele in guideTabListData" class="guideTabItem" v-on:click="tabSelected(ele)" :data-num="ele.num">
-                            <a>
-                                <span>{{ele.title}}</span>
-                            </a>
-                        </li>
-                    </ul>
-
-                    <div class="guideDetailList column is-11-desktop is-9-mobile is-11-tablet">
-                        <div class="guideDetail" v-for="ele in currentGroupData" 
-                    v-show="currentGroup != null" :id="ele.alt">
-                            <a :href="ele.src">
-                                <img class="guideDetailImg" :src="getFaviconUrl(ele.src)" onerror="javascript:this.src='img/default.png';">
-                            </a>
-                            <div class="guideDetailContent">
-                                <a :href="ele.src" class="guideDetailAltWrapper">
-                                    <h3 class="guideDatilAlt">{{ele.alt}}</h3>
+        <div id="app" class="fullHeight">
+            <div class="columns fullHeight">
+                <!-- Left sidebar navigation -->
+                <aside class="column is-1-desktop is-3-mobile is-1-tablet fullHeight">
+                    <div class="guideTab fullHeight">
+                        <ul>
+                            <li v-for="ele in guideTabListData" class="guideTabItem" v-on:click="tabSelected(ele)" :data-num="ele.num">
+                                <a>
+                                    <span>{{ele.title}}</span>
                                 </a>
+                            </li>
+                        </ul>
+                    </div>
+                </aside>
+                
+                <!-- Main content -->
+                <main class="column is-11-desktop is-9-mobile is-11-tablet fullHeight">
+                    <div class="container">
+                        <div class="guideDetailList">
+                            <div class="guideDetail" v-for="ele in currentGroupData" 
+                        v-show="currentGroup != null" :id="ele.alt">
+                                <a :href="ele.src">
+                                    <img class="guideDetailImg" :src="getFaviconUrl(ele.src)" onerror="javascript:this.src='img/default.png';">
+                                </a>
+                                <div class="guideDetailContent">
+                                    <a :href="ele.src" class="guideDetailAltWrapper">
+                                        <h3 class="guideDatilAlt">{{ele.alt}}</h3>
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </main>
+                </main>
             </div>
         </div>
 
