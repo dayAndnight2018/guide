@@ -17,13 +17,29 @@
 
     <body>
         <div id="app" class="fullHeight">
-            <div class="columns fullHeight">
+            <!-- Header -->
+            <header class="header">
+                <div class="header-left">
+                    <div class="logo">Guide</div>
+                </div>
+                <div class="search-container">
+                    <span class="search-icon">🔍</span>
+                    <input type="text" class="search-input" placeholder="搜索站点、工具、资源...">
+                </div>
+                <div class="header-right">
+                    <span class="settings-icon">⚙️</span>
+                </div>
+            </header>
+            
+            <!-- Main content -->
+            <div class="main-content">
                 <!-- Left sidebar navigation -->
-                <aside class="column is-1-desktop is-3-mobile is-1-tablet fullHeight">
-                    <div class="guideTab fullHeight">
+                <aside class="column is-1-desktop is-3-mobile is-1-tablet">
+                    <div class="guideTab">
                         <ul>
                             <li v-for="ele in guideTabListData" class="guideTabItem" v-on:click="tabSelected(ele)" :data-num="ele.num">
                                 <a>
+                                    <span class="guideTabItem-icon">📁</span>
                                     <span>{{ele.title}}</span>
                                 </a>
                             </li>
