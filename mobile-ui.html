@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>资源导航</title>
+  <script src="js/vue.js"></script>
+  <script src="js/data.js"></script>
+  <style>
+    /* ===== Reset & Base ===== */
+    *, *::before, *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --primary: #3B82F6;
+      --primary-light: #EBF2FF;
+      --bg: #F3F4F8;
+      --card-bg: #FFFFFF;
+      --text-primary: #1F2937;
+      --text-secondary: #6B7280;
+      --text-muted: #9CA3AF;
+      --border: #E5E7EB;
+      --shadow: 0 1px 3px rgba(0,0,0,0.06), 0 1px 2px rgba(0,0,0,0.04);
+      --radius: 12px;
+      --radius-sm: 8px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      background: var(--bg);
+      color: var(--text-primary);
+      line-height: 1.5;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      overflow-x: hidden;
+    }
+
+    /* ===== Phone Frame (for desktop preview) ===== */
+    .phone-frame {
+      max-width: 420px;
+      margin: 0 auto;
+      min-height: 100vh;
+      background: var(--bg);
+      position: relative;
+    }
+
+    /* ===== Top Bar ===== */
+    .top-bar {
+      display: flex;
+      align-items: center;
+      padding: 12px 16px;
+      background: var(--card-bg);
+      gap: 10px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .guide-btn {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      color: var(--text-secondary);
+      font-size: 14px;
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: color 0.2s;
+    }
+
+    .guide-btn:hover {
+      color: var(--primary);
+    }
+
+    .guide-btn .icon {
+      width: 20px;
+      height: 20px;
+      background: var(--primary);
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .guide-btn .icon svg {
+      width: 14px;
+      height: 14px;
+      fill: #fff;
+    }
+
+    .search-bar {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      background: var(--bg);
+      border-radius: 20px;
+      padding: 8px 14px;
+      gap: 8px;
+      transition: box-shadow 0.2s;
+    }
+
+    .search-bar:focus-within {
+      box-shadow: 0 0 0 2px var(--primary);
+      background: #fff;
+    }
+
+    .search-bar svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--text-muted);
+      flex-shrink: 0;
+    }
+
+    .search-bar input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 13px;
+      color: var(--text-primary);
+      width: 100%;
+    }
+
+    .search-bar input::placeholder {
+      color: var(--text-muted);
+    }
+
+    .moon-btn {
+      width: 36px;
+      height: 36px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--bg);
+      flex-shrink: 0;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .moon-btn:hover {
+      background: var(--border);
+    }
+
+    .moon-btn svg {
+      width: 18px;
+      height: 18px;
+      fill: var(--text-secondary);
+    }
+
+    /* ===== Tabs ===== */
+    .tabs-wrapper {
+      background: var(--card-bg);
+      padding: 0 16px;
+      position: sticky;
+      top: 57px;
+      z-index: 99;
+    }
+
+    .tabs {
+      display: flex;
+      gap: 0;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+    }
+
+    .tabs::-webkit-scrollbar {
+      display: none;
+    }
+
+    .tab {
+      flex-shrink: 0;
+      padding: 12px 16px;
+      font-size: 13px;
+      color: var(--text-secondary);
+      cursor: pointer;
+      position: relative;
+      white-space: nowrap;
+      transition: color 0.2s;
+      user-select: none;
+    }
+
+    .tab:hover {
+      color: var(--text-primary);
+    }
+
+    .tab.active {
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .tab.active::before {
+      content: '';
+      position: absolute;
+      inset: 6px 4px;
+      background: var(--primary);
+      border-radius: 8px;
+      z-index: -1;
+    }
+
+    .tabs-divider {
+      height: 1px;
+      background: var(--border);
+    }
+
+    /* ===== Section Header ===== */
+    .section-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 16px 12px;
+    }
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 16px;
+      font-weight: 600;
+      color: var(--text-primary);
+    }
+
+    .section-title .back-icon {
+      color: var(--primary);
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .section-count {
+      font-size: 12px;
+      color: var(--text-muted);
+      background: var(--primary-light);
+      padding: 2px 10px;
+      border-radius: 12px;
+    }
+
+    /* ===== Card List ===== */
+    .card-list {
+      padding: 0 16px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card {
+      display: flex;
+      align-items: center;
+      background: var(--card-bg);
+      border-radius: var(--radius);
+      padding: 14px 16px;
+      box-shadow: var(--shadow);
+      gap: 14px;
+      cursor: pointer;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    .card:active {
+      transform: scale(0.98);
+      box-shadow: 0 0 0 rgba(0,0,0,0);
+    }
+
+    .card:hover {
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    }
+
+    .card-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .card-icon img {
+      width: 100%;
+      height: 100%;
+      border-radius: var(--radius-sm);
+      object-fit: cover;
+    }
+
+    .card-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .card-name {
+      font-size: 15px;
+      font-weight: 500;
+      color: var(--text-primary);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-desc {
+      font-size: 12px;
+      color: var(--text-muted);
+      margin-top: 2px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .card-arrow {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .card-arrow svg {
+      width: 16px;
+      height: 16px;
+      fill: var(--text-muted);
+    }
+
+    /* ===== Icon Variants ===== */
+    .icon-yly { background: linear-gradient(135deg, #FF6B6B, #EE5A24); }
+    .icon-babz { background: linear-gradient(135deg, #A29BFE, #6C5CE7); }
+    .icon-mjjp { background: linear-gradient(135deg, #FD79A8, #E84393); }
+    .icon-jjbz { background: linear-gradient(135deg, #00B894, #00CEC9); }
+    .icon-yqbz { background: linear-gradient(135deg, #74B9FF, #0984E3); }
+    .icon-hczm { background: linear-gradient(135deg, #FDCB6E, #E17055); }
+    .icon-gqbz { background: linear-gradient(135deg, #55EFC4, #00B894); }
+    .icon-batw { background: linear-gradient(135deg, #DFE6E9, #636E72); }
+
+    /* ===== Ripple Effect ===== */
+    .card {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(circle at var(--x, 50%) var(--y, 50%), rgba(59,130,246,0.12) 0%, transparent 60%);
+      opacity: 0;
+      transition: opacity 0.3s;
+      pointer-events: none;
+    }
+
+    .card:active::after {
+      opacity: 1;
+    }
+
+    /* ===== Animations ===== */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(16px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .card {
+      animation: fadeInUp 0.4s ease both;
+    }
+
+    .card:nth-child(1) { animation-delay: 0.05s; }
+    .card:nth-child(2) { animation-delay: 0.10s; }
+    .card:nth-child(3) { animation-delay: 0.15s; }
+    .card:nth-child(4) { animation-delay: 0.20s; }
+    .card:nth-child(5) { animation-delay: 0.25s; }
+    .card:nth-child(6) { animation-delay: 0.30s; }
+    .card:nth-child(7) { animation-delay: 0.35s; }
+    .card:nth-child(8) { animation-delay: 0.40s; }
+    .card:nth-child(9) { animation-delay: 0.45s; }
+    .card:nth-child(10) { animation-delay: 0.50s; }
+
+    /* ===== Responsive ===== */
+    @media (max-width: 420px) {
+      .phone-frame {
+        max-width: 100%;
+      }
+    }
+
+    @media (prefers-color-scheme: dark) {
+      /* Dark mode ready placeholder */
+    }
+  </style>
+</head>
+<body>
+
+<div class="phone-frame" id="app">
+
+  <!-- ===== Top Bar ===== -->
+  <div class="top-bar">
+    <div class="guide-btn">
+      <div class="icon">
+        <svg viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
+      </div>
+      <span>Guide</span>
+    </div>
+
+    <div class="search-bar">
+      <svg viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
+      <input type="text" placeholder="搜索站点、工具、资源">
+    </div>
+
+    <div class="moon-btn">
+      <svg viewBox="0 0 24 24"><path d="M12 3c-4.97 0-9 4.03-9 9s4.03 9 9 9 9-4.03 9-9c0-.46-.04-.92-.1-1.36a5.389 5.389 0 01-4.4 2.26 5.403 5.403 0 01-3.14-9.8c-.44-.06-.9-.1-1.36-.1z"/></svg>
+    </div>
+  </div>
+
+  <!-- ===== Tabs ===== -->
+  <div class="tabs-wrapper">
+    <div class="tabs">
+      <div v-for="ele in guideTabListData" class="tab" :class="{ active: currentGroup == ele.num }" v-on:click="tabSelected(ele)">
+        {{ ele.title }}
+      </div>
+    </div>
+    <div class="tabs-divider"></div>
+  </div>
+
+  <!-- ===== Section Header ===== -->
+  <div class="section-header">
+    <div class="section-title">
+      <span class="back-icon">&lt;&lt;</span>
+      {{ currentTitle }}
+    </div>
+    <div class="section-count">{{ currentGroupData.length }} 个站点</div>
+  </div>
+
+  <!-- ===== Card List ===== -->
+  <div class="card-list">
+    <div v-for="(ele, index) in currentGroupData" class="card" :key="ele.alt" :style="{ animationDelay: (index * 0.05) + 's' }" :onclick="`window.open('${ele.src}', '_blank')`">
+      <div class="card-icon" :style="getCardIconStyle(ele.alt)">
+        <img :src="getFaviconUrl(ele.src)" onerror="javascript:this.src='img/default.png';" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover;">
+      </div>
+      <div class="card-info">
+        <div class="card-name">{{ ele.alt }}</div>
+        <div class="card-desc">{{ getCardDesc(ele.alt) }}</div>
+      </div>
+      <div class="card-arrow">
+        <svg viewBox="0 0 24 24"><path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"/></svg>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  var vue = new Vue({
+    el: "#app",
+    data: {
+      guideTabListData: guideTabListData,
+      guideTabGroupListData: guideTabGroupListData,
+      currentGroup: 5, // 默认选中壁纸
+      currentGroupData: [],
+      currentTitle: "壁纸"
+    },
+    methods: {
+      tabSelected: function(ele) {
+        this.currentGroup = ele.num;
+        this.currentGroupData = this.guideTabGroupListData.filter((a) => a.num == this.currentGroup)[0].data;
+        this.currentTitle = ele.title;
+      },
+      getFaviconUrl: function(url) {
+        let domain = url.split('/'); 
+        if(domain[0] && domain[2]) {
+          return domain[0] + "//" +  domain[2] + '/favicon.ico';
+        }
+        return 'img/default.png';
+      },
+      getCardIconStyle: function(alt) {
+        // 为不同网站生成不同的渐变背景色
+        const colors = [
+          'linear-gradient(135deg, #FF6B6B, #EE5A24)',
+          'linear-gradient(135deg, #A29BFE, #6C5CE7)',
+          'linear-gradient(135deg, #FD79A8, #E84393)',
+          'linear-gradient(135deg, #00B894, #00CEC9)',
+          'linear-gradient(135deg, #74B9FF, #0984E3)',
+          'linear-gradient(135deg, #FDCB6E, #E17055)',
+          'linear-gradient(135deg, #55EFC4, #00B894)',
+          'linear-gradient(135deg, #DFE6E9, #636E72)',
+          'linear-gradient(135deg, #FF9FF3, #F368E0)',
+          'linear-gradient(135deg, #48DBFB, #0ABDE3)'
+        ];
+        const index = alt.length % colors.length;
+        return { background: colors[index] };
+      },
+      getCardDesc: function(alt) {
+        // 为不同网站生成描述
+        const descMap = {
+          '雅拉依': '精选高清壁纸资源站',
+          '彼岸壁纸': '海量高清桌面壁纸下载',
+          '魔镜街拍': '摄影与街拍壁纸精选',
+          '极简壁纸': '极简风格壁纸合集',
+          '元气壁纸': '充满活力的壁纸资源',
+          '回车桌面': '桌面壁纸与美化工具',
+          '高清壁纸': '4K / 8K 超高清壁纸',
+          '彼岸图网': '4K 高清图片素材库',
+          '壁纸360': '高清壁纸下载',
+          'wallpaper': '全球壁纸社区精选'
+        };
+        return descMap[alt] || '优质网站资源';
+      }
+    },
+    mounted: function() {
+      // 初始化默认数据
+      this.currentGroupData = this.guideTabGroupListData.filter((a) => a.num == this.currentGroup)[0].data;
+    }
+  });
+
+  // Card ripple position tracking
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.card')) {
+      const card = e.target.closest('.card');
+      const rect = card.getBoundingClientRect();
+      card.style.setProperty('--x', ((e.clientX - rect.left) / rect.width * 100) + '%');
+      card.style.setProperty('--y', ((e.clientY - rect.top) / rect.height * 100) + '%');
+    }
+  });
+</script>
+
+</body>
+</html>
