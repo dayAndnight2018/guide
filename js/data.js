@@ -145,7 +145,7 @@ let movies = [{
 			alt: "轻音乐"
 		},
 		{
-			src: 'https://55me7.art/',
+			src: 'https://www.555kdy.vip/label/new.html',
 			alt: '555影视'
 		},
 		{
@@ -234,10 +234,6 @@ let books = [{
 			alt: '盐老虎'
 		},
 		{
-			src: 'https://www.letmeread.net',
-			alt: 'letmeread'
-		},
-		{
 			src: 'https://book.zhishikoo.com',
 			alt: '知识库'
 		},
@@ -284,7 +280,7 @@ let books = [{
 			src: 'https://oceanofpdf.com',
 			alt: 'PDF海洋'
 		},{
-			src: "https://zh.kid1412.icu/",
+			src: "https://zh.bcf101.ru/",
 			alt: "Zlibrary"
 		}
 	]
