@@ -145,7 +145,7 @@ let movies = [{
 			alt: "轻音乐"
 		},
 		{
-			src: 'https://www.555kdy.vip/label/new.html',
+			src: 'https://www.555k7.com/vodtype/2.html',
 			alt: '555影视'
 		},
 		{
