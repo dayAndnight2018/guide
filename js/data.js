@@ -149,14 +149,6 @@ let movies = [{
 			alt: '555影视'
 		},
 		{
-			src: 'https://www.runker.live',
-			alt: '行客影视'
-		},
-		{
-			src: 'http://www.gjw123.com/tools-dyss',
-			alt: '电影狗'
-		},
-		{
 			src: 'http://www.tieren5.com',
 			alt: '铁人影院'
 		},
