@@ -38,7 +38,11 @@ let guideTabListData = [{
 	{
 		title: '时事新闻',
 		num: 9
-	}
+	},
+    {
+        title: 'AI工具',
+		num: 10
+    }
 ];
 
 
@@ -83,6 +87,19 @@ let program = [{
 			alt: 'DeepSeek'
 		}
 
+	]
+}]
+
+let ais = [{
+	num: 10,
+	data: [{
+			src: 'https://free-api.gd7.cn/',
+			alt: '免费模型排行'
+		},
+		{
+			src: 'https://www.agnes-ai.cn/',
+			alt: 'Agnes'
+		}
 	]
 }]
 
@@ -665,4 +682,4 @@ let news = [{
 	]
 }]
 
-guideTabGroupListData = guideTabGroupListData.concat(program, learning, movies, books, developTools, pictures, tools, win_soft, mac_soft, news);
+guideTabGroupListData = guideTabGroupListData.concat(program, learning, ais, movies, books, developTools, pictures, tools, win_soft, mac_soft, news);
