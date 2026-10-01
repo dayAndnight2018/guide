@@ -668,14 +668,6 @@ let news = [{
 		{
 			src: 'http://gongkao66688.edudisk.cn/webfile.aspx',
 			alt: '教程'
-		},
-		{
-			src: 'http://gongkao66688.edudisk.cn/ContentPane.aspx?Path=%2f2025%c4%ea%b9%fa%bf%bc%a1%fb+%a1%fb+%b5%e3%bb%f7%bd%f8%c8%eb/',
-			alt: '资料盘1'
-		},
-		{
-			src: 'http://gongkao66688.edudisk.cn/ContentPane.aspx?Path=%2f2025%c4%ea%ca%a1%bf%bc%a1%fb+%a1%fb+%b5%e3%bb%f7%bd%f8%c8%eb/',
-			alt: '资料盘2'
 		}
 		
 		
