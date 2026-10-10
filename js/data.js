@@ -99,6 +99,10 @@ let ais = [{
 		{
 			src: 'https://www.agnes-ai.cn/',
 			alt: 'Agnes'
+		},
+		{
+			src: "https://bigmodel.cn/",
+			alt: "智谱AI"
 		}
 	]
 }]
