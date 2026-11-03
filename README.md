@@ -3,6 +3,48 @@
 #### 介绍
 导航项目
 
+#### 浏览器插件（管理导航 + git 提交推送）
+
+本项目自带一个 Chrome/Edge 扩展，用于管理 `js/data.js` 中的导航地址：
+
+- 查看/修改/删除/新增导航地址，支持新建分类、筛选、跨分类移动
+- 一键将当前浏览的页面加入导航（弹窗预填 或 网页右键「添加到 Guide 导航」）
+- 触发 `git add -A && git commit && git push`（本地宿主脚本执行，走本机 git 凭据）
+- 每次保存前自动备份为 `js/data.js.bak`
+
+**安装**（需已安装 Node.js 与 git）：
+
+```bash
+node native-host/install.js
+```
+
+然后打开 `chrome://extensions`（Edge 为 `edge://extensions`）→ 开启「开发者模式」→「加载已解压的扩展程序」→ 选择本仓库的 `extension` 目录。
+
+**卸载**：
+
+```bash
+node native-host/install.js --uninstall
+```
+
+（再在浏览器扩展页移除扩展即可。）
+
+**目录说明**
+
+| 路径 | 用途 |
+| --- | --- |
+| `extension/` | 浏览器扩展（MV3，未打包加载） |
+| `native-host/` | 本地宿主脚本 + 安装器 + 测试 |
+| `js/data.js` | 导航数据唯一数据源（插件与页面共用，可手动编辑） |
+
+**原理**：扩展通过 Chrome Native Messaging（注册表 `HKCU\...\NativeMessagingHosts\com.dayandnight.guide`，仅当前用户、无需管理员）启动 `native-host/host.bat`，由宿主解析/再生成 `js/data.js` 并执行 git 命令。扩展 ID 已通过 `manifest.json` 中的 key 固定，重装/更新不会失效。
+
+**常见问题**
+
+- 提示无法连接本地宿主：重新运行 `node native-host/install.js` 并重启浏览器
+- 推送失败：多为远端有新提交（先 `git pull`）或凭据过期（手动执行一次 `git push` 重新登录）
+- 测试宿主：`node native-host/test-host.js`
+
+
 #### 软件架构
 软件架构说明
 

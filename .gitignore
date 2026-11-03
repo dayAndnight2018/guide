@@ -1,0 +1,8 @@
+# 扩展私钥（固定扩展 ID 用，勿提交）
+extension/key.pem
+
+# 插件保存前自动生成的备份
+js/data.js.bak
+
+# 安装时按本机路径生成的宿主清单
+native-host/host-manifest.json

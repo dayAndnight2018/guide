@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Guide 导航管理",
+    "version": "1.0.0",
+    "description": "管理个人导航站(guide)的地址：查看/修改/删除/快捷添加当前页，并可触发 git 提交与推送",
+    "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA2BDLaYw9ypZya1HfEf2JMr6UMgdD9Fy8X2Gc+z/trTuOYkqG+xWxm+Kq7tv7B77AaWYAbssVT98sYA2+2XNO0jeLmeKYJB8tsopAm8F/NkHc0NecuEDuHUs7JLdTsZY22gaWZIakQROtgr3WeoBbLW900HukyjX3zeioAbM8XJRG++hkVIKEOKuT3iYXzrQiEdswJwQVRW4+j+nMmfWto6rrkqIpoOaq5YeYvISwmvbNY8b4jqj1yEDIyBf/9L0IEZhnxSTXXSRz+tKM3EVTARYMN+1OCLLE+RCQqrUR9G7J1CFKSaCzFKP/bLiKhygpPCue6r5s68c4IxMUi3wvuwIDAQAB",
+    "minimum_chrome_version": "110",
+    "permissions": [
+        "nativeMessaging",
+        "tabs",
+        "contextMenus",
+        "storage"
+    ],
+    "background": {
+        "service_worker": "background.js"
+    },
+    "action": {
+        "default_popup": "popup.html",
+        "default_title": "Guide 导航管理"
+    },
+    "icons": {
+        "16": "icons/icon.png",
+        "48": "icons/icon.png",
+        "128": "icons/icon.png"
+    }
+}
