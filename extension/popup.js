@@ -29,11 +29,21 @@ function sendNative(message) {
     return new Promise((resolve, reject) => {
         chrome.runtime.sendNativeMessage(HOST, message, (resp) => {
             if (chrome.runtime.lastError) {
-                reject(new Error(chrome.runtime.lastError.message));
+                const e = new Error(chrome.runtime.lastError.message);
+                e.hostDown = true; // 连不上宿主（未安装/未注册/node 缺失）
+                reject(e);
                 return;
             }
-            if (!resp) { reject(new Error('本地宿主无响应')); return; }
-            if (resp.ok === false) { reject(new Error(resp.error || '未知错误')); return; }
+            if (!resp) {
+                const e = new Error('本地宿主无响应');
+                e.hostDown = true;
+                reject(e);
+                return;
+            }
+            if (resp.ok === false) {
+                reject(new Error(resp.error || '未知错误')); // 宿主执行的业务错误（git/文件等）
+                return;
+            }
             resolve(resp);
         });
     });
@@ -283,7 +293,6 @@ async function onSave(push) {
     if (state.busy) return;
     const hasLocalEdits = state.diff.add || state.diff.del || state.diff.mod;
     if (!push && !hasLocalEdits) { toast('没有需要保存的更改'); return; }
-    if (push && !hasLocalEdits && state.gitDirty === 0) { toast('没有需要提交的更改'); return; }
 
     state.busy = true;
     const btn = push ? $('btnPush') : $('btnSave');
@@ -293,9 +302,10 @@ async function onSave(push) {
     try {
         if (hasLocalEdits) await saveToHost();
         if (push) {
+            // 即使没有新编辑也照常调用：宿主会发现“有提交未推送”并补推（网络故障重试入口）
             const msg = ($('msg').value || '').trim() || autoMsg();
             const r = await sendNative({ cmd: 'commitPush', message: msg });
-            if (r.nothing) toast('没有需要提交的更改');
+            if (r.nothing) toast('没有需要提交或推送的更改');
             else {
                 const first = (r.commit || '').split('\n')[0];
                 toast('已提交并推送 ✓\n' + first, 'ok');
@@ -306,8 +316,8 @@ async function onSave(push) {
         }
         await refreshGit();
     } catch (e) {
-        toast(push ? '失败：' + e.message : '保存失败：' + e.message, 'err');
-        hostDownHint(e);
+        toast((push ? '推送失败：' : '保存失败：') + e.message, 'err');
+        if (e.hostDown) hostDownHint(e); // 只有连不上宿主才提示重装
     }
     state.busy = false;
     btn.disabled = false;

@@ -41,7 +41,9 @@ node native-host/install.js --uninstall
 **常见问题**
 
 - 提示无法连接本地宿主：重新运行 `node native-host/install.js` 并重启浏览器
-- 推送失败：多为远端有新提交（先 `git pull`）或凭据过期（手动执行一次 `git push` 重新登录）
+- 推送失败提示 `Failed to connect to github.com`：github 间歇性断连，宿主会自动重试 3 次；仍失败时本地提交已保留，网络恢复后再点一次「保存并推送」即可补推
+- 第一次推送可能弹出 GitHub 登录窗口（Git Credential Manager），完成一次后凭据缓存，之后推送无感
+- 远端有新提交导致推送被拒：先在终端 `git pull` 再推送
 - 测试宿主：`node native-host/test-host.js`
 
 

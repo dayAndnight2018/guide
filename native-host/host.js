@@ -92,10 +92,15 @@ function git(args, timeoutMs) {
         encoding: 'utf8',
         timeout: timeoutMs || 30000,
         windowsHide: true,
+        env: Object.assign({}, process.env, {
+            // 禁止 git 在终端里等用户输入账号密码（凭据走 GCM，避免后台静默挂死）
+            GIT_TERMINAL_PROMPT: '0',
+        }),
     });
     if (r.error) throw new Error('无法执行 git: ' + r.error.message);
     return {
         code: r.status,
+        signal: r.signal || '',
         stdout: (r.stdout || '').trim(),
         stderr: (r.stderr || '').trim(),
     };
@@ -108,24 +113,50 @@ function gitStatus() {
     return { dirty: lines.length, lines };
 }
 
+// 把 git 失败结果整理成可读文本（保证非空）
+function describeGitFailure(r) {
+    const parts = [];
+    if (r.stdout) parts.push(r.stdout);
+    if (r.stderr) parts.push(r.stderr);
+    if (r.signal) parts.push('进程被终止(' + r.signal + ')，通常是超时');
+    if (!parts.length) parts.push('git 退出码 ' + r.code + '（无输出）');
+    return parts.join('\n');
+}
+
 function commitPush(message) {
     const status = gitStatus();
-    if (status.dirty === 0) {
+    // 未推送的提交也算“有待处理”（上次推送失败后可直接重试推送）
+    const ahead = git(['rev-list', '--count', 'origin/master..HEAD']);
+    const nAhead = ahead.code === 0 ? (parseInt(ahead.stdout, 10) || 0) : 0;
+    if (status.dirty === 0 && nAhead === 0) {
         return { ok: true, nothing: true };
     }
-    // 需要一个合理的提交说明
-    const msg = (message && String(message).trim()) || '更新导航';
-    let r = git(['add', '-A']);
-    if (r.code !== 0) throw new Error('git add 失败: ' + r.stderr);
-    r = git(['commit', '-m', msg]);
-    if (r.code !== 0) throw new Error('git commit 失败: ' + r.stderr);
-    const commitOut = r.stdout;
-    // 推送给凭据弹窗留足时间
-    r = git(['push'], 180000);
-    if (r.code !== 0) {
-        throw new Error('提交成功但推送失败（可稍后在插件中重试或手动 push）:\n' + (r.stderr || r.stdout));
+
+    let commitOut = '';
+    if (status.dirty > 0) {
+        const msg = (message && String(message).trim()) || '更新导航';
+        let r = git(['add', '-A']);
+        if (r.code !== 0) throw new Error('git add 失败: ' + describeGitFailure(r));
+        r = git(['commit', '-m', msg]);
+        if (r.code !== 0) throw new Error('git commit 失败: ' + describeGitFailure(r));
+        commitOut = r.stdout;
     }
-    return { ok: true, commit: commitOut, push: r.stdout || r.stderr || '完成' };
+
+    // 推送：github 网络间歇性抖动时自动重试；凭据类错误不重试
+    let lastErr = '';
+    for (let attempt = 1; attempt <= 3; attempt++) {
+        const r = git(['push'], 180000); // 给凭据弹窗（GCM 首次授权）留足时间
+        if (r.code === 0) {
+            return { ok: true, commit: commitOut, push: r.stdout || r.stderr || '完成' };
+        }
+        lastErr = describeGitFailure(r);
+        if (/terminal prompts disabled|Authentication failed|could not read Username|403/i.test(lastErr)) break;
+        if (attempt < 3) {
+            // 同步等待 3 秒后重试
+            Atomics.wait(new Int32Array(new SharedArrayBuffer(4)), 0, 0, 3000);
+        }
+    }
+    throw new Error('提交已保留在本地，仅推送失败（网络恢复后再点一次即可）:\n' + lastErr);
 }
 
 // ---------------- Native Messaging 协议 ----------------

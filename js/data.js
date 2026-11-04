@@ -180,6 +180,8 @@ let guideTabGroupListData = [
 			{"src":"https://registry.npmmirror.com/binary.html?path=git-for-windows","alt":"Git安装包镜像"},
 			{"src":"https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html","alt":"JDK8"},
 			{"src":"https://github.com/microsoft/winget-cli/releases","alt":"wget安装"},
+			{"src":"https://www.cnblogs.com/jopny/p/window_office_onekey_activate_free.html","alt":"一行命令永久激活"},
+			{"src":"https://www.cnblogs.com/hungrycats/p/18244265","alt":"office下载"},
 		]
 	},
 	{

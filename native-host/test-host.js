@@ -9,7 +9,7 @@
 const fs = require('fs');
 const os = require('os');
 const path = require('path');
-const { spawn } = require('child_process');
+const { spawn, spawnSync } = require('child_process');
 
 const HOST = path.join(__dirname, 'host.js');
 const REAL_DATA = path.join(__dirname, '..', 'js', 'data.js');
@@ -131,6 +131,45 @@ async function main() {
     console.log('  信息: 当前仓库未提交文件数 =', r5.dirty);
     h2.close();
 
+    // ---------- 测试 4：commitPush 完整流程（本地裸仓库，离线） ----------
+    console.log('[4] commitPush 流程（临时本地裸仓库，不联网）');
+    const work = fs.mkdtempSync(path.join(os.tmpdir(), 'guide-git-test-'));
+    const bare = work + '-bare.git';
+    fs.mkdirSync(path.join(work, 'js'), { recursive: true });
+    fs.copyFileSync(REAL_DATA, path.join(work, 'js', 'data.js'));
+    const wg = (args) => spawnSync('git', ['-C', work].concat(args), { encoding: 'utf8' });
+    spawnSync('git', ['init', '-b', 'master', work], { encoding: 'utf8' });
+    wg(['config', 'user.email', 'test@test.local']);
+    wg(['config', 'user.name', 'test']);
+    spawnSync('git', ['init', '--bare', '-b', 'master', bare], { encoding: 'utf8' });
+    wg(['remote', 'add', 'origin', bare]);
+    wg(['add', '-A']);
+    wg(['commit', '-m', 'init']);
+    wg(['push', '-u', 'origin', 'master']);
+    const countBare = () => parseInt(spawnSync('git', ['-C', bare, 'rev-list', '--count', 'master'], { encoding: 'utf8' }).stdout.trim(), 10);
+
+    const h3 = makeHost({ GUIDE_REPO_ROOT: work });
+    const g0 = await h3.send({ cmd: 'get' });
+    g0.groups[0].data.push({ src: 'https://example.com/git-test', alt: 'git流程测试' });
+    await h3.send({ cmd: 'save', tabs: g0.tabs, groups: g0.groups });
+    const r6 = await h3.send({ cmd: 'commitPush', message: '测试提交' });
+    assert(r6.ok === true && !r6.nothing, 'commitPush 提交并推送成功');
+    assert(countBare() === 2, '裸仓库收到新提交（1 -> 2）');
+    const r7 = await h3.send({ cmd: 'commitPush' });
+    assert(r7.ok === true && r7.nothing === true, '无更改且无未推提交时返回 nothing');
+    h3.close();
+
+    // ---------- 测试 5：真实仓库无副作用路径 ----------
+    console.log('[5] commitPush 真实仓库（仅在干净时验证 nothing 路径）');
+    if (r5.dirty === 0) {
+        const h4 = makeHost({});
+        const r8 = await h4.send({ cmd: 'commitPush' });
+        assert(r8.ok === true && r8.nothing === true, '真实仓库干净时返回 nothing（不产生副作用）');
+        h4.close();
+    } else {
+        console.log('  跳过: 当前仓库有未提交文件（', r5.dirty, '个），不在此测试中提交真实仓库');
+    }
+
     // 清理临时目录
     for (const f of ['js/data.js', 'js/data.js.bak']) {
         const p = path.join(tmp, f);
@@ -138,6 +177,8 @@ async function main() {
     }
     fs.rmdirSync(path.join(tmp, 'js'));
     fs.rmdirSync(tmp);
+    fs.rmSync(work, { recursive: true, force: true });
+    fs.rmSync(bare, { recursive: true, force: true });
 
     console.log('');
     if (failures === 0) {
