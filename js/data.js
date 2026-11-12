@@ -136,6 +136,7 @@ let guideTabGroupListData = [
 			{"src":"https://www.lddgo.net/string/line-reduce#toolNoteIframe","alt":"sql合并到一行"},
 			{"src":"https://www.html5tricks.com/","alt":"html5tricks"},
 			{"src":"https://www.iodraw.com/gantt","alt":"在线甘特图"},
+			{"src":"https://3.jetbra.in/","alt":"idea激活码"},
 		]
 	},
 	{

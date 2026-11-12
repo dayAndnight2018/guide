@@ -9,6 +9,7 @@ const state = {
     groups: [],          // [{num, data: [{src, alt}]}]
     activeNum: null,     // 当前分类
     editKey: null,       // 正在编辑的条目 "num:index"
+    moveKey: null,       // 正在移动分类的条目 "num:index"
     confirmDelKey: null, // 待确认删除
     showAdd: false,      // 添加表单（含预填）
     addPrefill: { alt: '', src: '' },
@@ -159,16 +160,31 @@ function renderList() {
         const ops = state.confirmDelKey === key
             ? '<button class="op danger-text" data-action="del-ok" data-num="' + group.num + '" data-idx="' + idx + '">确认删除?</button>' +
               '<button class="op" data-action="del-cancel">✕</button>'
-            : '<button class="op" title="修改" data-action="edit" data-num="' + group.num + '" data-idx="' + idx + '">✏️</button>' +
+            : (state.tabs.length > 1
+                ? '<button class="op" title="移动分类" data-action="move" data-num="' + group.num + '" data-idx="' + idx + '">➡️</button>'
+                : '') +
+              '<button class="op" title="修改" data-action="edit" data-num="' + group.num + '" data-idx="' + idx + '">✏️</button>' +
               '<button class="op del" title="删除" data-action="del" data-num="' + group.num + '" data-idx="' + idx + '">🗑️</button>';
 
-        return '<div class="item">' +
+        let row = '<div class="item">' +
             '<div class="avatar" style="background:' + colorOf(dom) + '">' + esc((it.alt.trim()[0] || '?').toUpperCase()) + '</div>' +
             '<div class="info" data-action="open" data-src="' + esc(it.src) + '">' +
             '<div class="name">' + esc(it.alt) + '</div>' +
             '<div class="url">' + esc(dom) + '</div></div>' +
             '<div class="ops">' + ops + '</div>' +
             '</div>';
+
+        // 移动分类面板：列出其它分类，点选即移动
+        if (state.moveKey === key) {
+            const chips = state.tabs.filter((t) => t.num !== group.num).map((t) => {
+                const cnt = (state.groups.find((g) => g.num === t.num) || { data: [] }).data.length;
+                return '<span class="mp-chip" data-action="move-to" data-target="' + t.num + '">' +
+                    esc(t.title) + '<i>' + cnt + '</i></span>';
+            }).join('');
+            row += '<div class="movepanel"><span class="mp-label">移动到：</span>' + chips +
+                '<span class="mp-cancel" data-action="move-cancel" title="取消">✕</span></div>';
+        }
+        return row;
     }).join('');
 }
 
@@ -267,6 +283,25 @@ function doEditOk(groupNum, idx) {
     render();
 }
 
+function doMove(groupNum, idx, targetNum) {
+    if (targetNum === groupNum) return;
+    const from = state.groups.find((g) => g.num === groupNum);
+    const to = state.groups.find((g) => g.num === targetNum);
+    const item = from && from.data[idx];
+    if (!from || !to || !item) return;
+    if (to.data.some((it) => it.src === item.src)) {
+        toast('「' + to.data.find((it) => it.src === item.src).alt + '」已存在于目标分类', 'err');
+        return;
+    }
+    from.data.splice(idx, 1);
+    to.data.push({ src: item.src, alt: item.alt });
+    state.moveKey = null;
+    markDiff('mod');
+    render(); // 留在当前分类，方便继续移动其它条目
+    const t = state.tabs.find((x) => x.num === targetNum);
+    toast('已移动到「' + (t ? t.title : targetNum) + '」（未保存到文件）', 'ok');
+}
+
 function doDel(groupNum, idx) {
     const group = state.groups.find((g) => g.num === groupNum);
     const item = group.data[idx];
@@ -345,6 +380,7 @@ document.addEventListener('click', (e) => {
         case 'chip':
             state.activeNum = Number(target.dataset.num);
             state.editKey = null;
+            state.moveKey = null;
             state.confirmDelKey = null;
             state.showAdd = false;
             render();
@@ -363,8 +399,21 @@ document.addEventListener('click', (e) => {
             break;
         case 'add-ok': doAdd(); break;
         case 'add-cancel': state.showAdd = false; renderAddForm(); break;
+        case 'move':
+            state.moveKey = target.dataset.num + ':' + target.dataset.idx;
+            state.editKey = null;
+            state.confirmDelKey = null;
+            renderList();
+            break;
+        case 'move-to': {
+            const parts = (state.moveKey || '').split(':');
+            doMove(Number(parts[0]), Number(parts[1]), Number(target.dataset.target));
+            break;
+        }
+        case 'move-cancel': state.moveKey = null; renderList(); break;
         case 'edit':
             state.editKey = target.dataset.num + ':' + target.dataset.idx;
+            state.moveKey = null;
             state.confirmDelKey = null;
             renderList();
             break;
@@ -373,6 +422,7 @@ document.addEventListener('click', (e) => {
         case 'edit-cancel': state.editKey = null; renderList(); break;
         case 'del':
             state.confirmDelKey = target.dataset.num + ':' + target.dataset.idx;
+            state.moveKey = null;
             renderList();
             break;
         case 'del-ok': doDel(Number(target.dataset.num), Number(target.dataset.idx)); break;
