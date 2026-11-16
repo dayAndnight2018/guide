@@ -28,6 +28,7 @@ let guideTabGroupListData = [
 			{"src":"http://doc.redisfans.com/","alt":"Redis文档"},
 			{"src":"https://yiyan.baidu.com/","alt":"文心一言"},
 			{"src":"https://chat.deepseek.com/","alt":"DeepSeek"},
+			{"src":"https://mp.weixin.qq.com/?token=&lang=zh_CN","alt":"微信公众平台"},
 		]
 	},
 	{
